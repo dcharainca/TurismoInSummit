@@ -1,0 +1,847 @@
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W36ZTBJ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#0079C1" />
+    <meta name="author" content="Promperú">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title> .: Turismo In Summit :. </title>
+    <meta name="description"
+        content="Tómate un día para actualizarte, dar un paso hacia la mejora, encontrar aliados estratégicos, desarrollar una red de contactos y asesorarte con expertos del sector." />
+    <link rel="shortcut icon" type="image/x-icon" href="complemento/img/favicon.png" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/libs/magnific-popup/magnific-popup.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/global.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/loading.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/menu.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/home.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/footer.css" />
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://turismoin.pe/turismoinsummit">
+    <meta property="og:title" content="Turismo In Summit">
+    <meta property="og:image" content="https://www.promperu.gob.pe/TurismoIN/turismoinday/complemento/img/share.jpg">
+    <meta property="og:description"
+        content="Tómate un día para actualizarte, dar un paso hacia la mejora, encontrar aliados estratégicos, desarrollar una red de contactos y asesorarte con expertos del sector.">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://turismoin.pe/turismoinsummit">
+    <meta name="twitter:title" content="Turismo In Summit">
+    <meta name="twitter:image"
+        content="https://www.promperu.gob.pe/TurismoIN/turismoinsummit/complemento/img/share.jpg">
+    <meta name="twitter:description"
+        content="Tómate un día para actualizarte, dar un paso hacia la mejora, encontrar aliados estratégicos, desarrollar una red de contactos y asesorarte con expertos del sector.">
+</head>
+
+<body>
+
+    <style>
+        .carousel {
+            margin: 0 auto;
+            padding: 20px 0;
+            max-width: 100%;
+            overflow: hidden;
+            display: flex;
+
+            &:hover .group {
+                animation-play-state: paused;
+            }
+        }
+
+        .group {
+            display: flex;
+            gap: 20px;
+            /* Add padding to the right to create a gap between the last and first card. */
+            padding-right: 20px;
+            will-change: transform;
+            /* We should be nice to the browser - let it know what we're going to animate. */
+            animation: scrolling 10s linear infinite;
+        }
+
+        @keyframes scrolling {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .card {
+            width: 230px;
+            color: white;
+            border-radius: 24px;
+            box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+            padding: 20px;
+            font-size: xx-large;
+            justify-content: center;
+            align-items: center;
+            min-height: 270px;
+            background-size: cover !important;
+            position: relative;
+
+            &:nth-child(1) {
+                background: #7958ff;
+            }
+
+            &:nth-child(2) {
+                background: #5d34f2;
+            }
+
+            &:nth-child(3) {
+                background: #4300da;
+            }
+
+            &:nth-child(4) {
+                background: #5d34f2;
+            }
+
+            &:nth-child(5) {
+                background: #4300da;
+            }
+        }
+
+        .card h5 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'FC_Light';
+            /* font-weight: normal; */
+        }
+
+
+        /* conferencias */
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #0071B9;
+        }
+
+        .header h2 {
+            font-size: 30px;
+            color: #000000;
+            font-family: 'FC_Regular';
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #6d6d6d;
+        }
+
+        .session {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .time {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;            
+            text-align: center;
+            margin-right: 20px; 
+            width: 30%;           
+        }
+
+        .time .hour {
+            color: #662483;
+            font-family: 'FC_Regular';
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 15px;
+        }
+
+        .time .min {
+            font-weight: bolder;
+            font-family: 'FC_Regular';
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 15px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 70%;
+        }
+
+        .details h2 {
+            font-size: 30px;
+            color: #662483;
+            font-family: 'FC_Regular';
+        }
+
+        /* .details h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3f3f3f;
+        } */
+
+        .details p {
+            color: #3f3f3f;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .details .buttons {
+            /* background-color: #7f3f98; */
+            /* color: #fff; */
+            font-family: 'FC_Regular';
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+
+        .button.outlook {
+            background-color: #7f3f98;
+            color: #fff;
+        }
+
+        .button.google {
+            background-color: #0070BA;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+    </style>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W36ZTBJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="page-loader">
+        <div class="page-loader-spinner">
+            <div class="page-loader-spinner-bounce1"></div>
+            <div class="page-loader-spinner-bounce2"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-menu">
+            <div class="wrapper-menu-container">
+                <div class="wrapper-menu-left">
+                    <div class="wrapper-menu-left-container">
+                        <div>
+                            <a href="https://www.promperu.gob.pe/" target="_blank"><img
+                                    src="complemento/img/promperu.png"></a>
+                            <span></span>
+                            <a href="https://www.promperu.gob.pe/TurismoIN" target="_blank"><img
+                                    src="complemento/img/turismoin.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-menu-right">
+                    <ul>
+                        <li><a href="#que-es" class="linkeo">Turismo In Summit</a></li>
+                        <li><a href="#programa" class="linkeo">Feria Tech</a></li>
+                        <li><a href="#bloques" class="linkeo">Conferencia y paneles</a></li>
+                        <li><a href="#colaboradores" class="linkeo">Ponente</a></li>
+                        <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform"
+                                target="_blank">Inscríbete aquí</a></li>
+                        <li><a href="javascript:;" class="btnMenuBar"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="wrapper-hero">
+            <div class="wrapper-hero-bar">
+                <a href="javascript:;" class="btn-hero-bar"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="wrapper-hero-menu">
+                <div class="wrapper-hero-menu-container">
+                    <ul>
+                        <li><a href="#inicio" class="linkeo">Inicio</a></li>
+                        <li><a href="#que-es" class="linkeo">Turismo In Summit</a></li>
+                        <li><a href="#programa" class="linkeo">Feria Tech</a></li>
+                        <li><a href="#bloques" class="linkeo">Conferencia y paneles</a></li>
+                        <li><a href="#colaboradores" class="linkeo">Ponente</a></li>
+                        <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform"
+                                target="_blank">Inscríbete aquí</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-banner" id="inicio">
+            <div class="wrapper-banner-section">
+                <div class="wrapper-banner-section-container">
+
+
+                    <div class="wrapper-banner-section-item">                        
+                        <div class="wrapper-banner-section-item-bg" style="background-image: url(complemento/img/Banner/banner_summit_2b.jpg);"></div>
+                        <div class="wrapper-banner-section-item-overlay"></div>
+                        
+                    </div>
+
+                    <!-- <div class="wrapper-banner-section-item-bg" style="background-image: url(complemento/img/Banner/bannerSummit.png);"></div>
+                    <div class="wrapper-banner-section-item-overlay"></div> -->
+                    <!-- <div class="wrapper-banner-section-item">
+                        <img src="complemento/img/Banner/bannerSummit.png" alt="" style="width: 100%;">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-first" id="que-es">
+            <div class="wrapper-first-section" style="padding-top: 50px;">
+                <div class="wrapper-first-item">
+                    <div class="wrapper-second-item-left">
+                        <img src="complemento/img/iconos/foco.png">
+                    </div>
+                    <!-- <div class="wrapper-first-item-left">
+                        
+                    </div> -->
+                    <div class="wrapper-first-item-right">
+                        <div class="wrapper-first-item-left">
+                            <h1>Turismo In Summit</h1>
+                        </div>
+                        <div class="wrapper-first-item-right-section">
+
+                            <p class="parrafo">
+                                El evento reúne a expertos, empresas y emprendedores del sector para abordar temas
+                                especializados en
+                                soluciones, estrategias y herramientas de innovación tecnológica aplicadas al turismo.
+                                También incluye
+                                seminarios con profesionales de primer nivel, una feria con proveedores de soluciones
+                                tecnológicas,
+                                espacios de ‘networking’ y oportunidades de formación a cargo de PROMPERÚ, entre otros.
+                                </b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-first-item">
+                    <div class="wrapper-second-item-left">
+                        <img src="complemento/img/iconos/podio.png">
+                    </div>
+                    <!-- <div class="wrapper-first-item-left">
+                        
+                    </div> -->
+                    <div class="wrapper-first-item-right">
+                        <div class="wrapper-first-item-left">
+                            <h1>¿Quiénes pueden participar?</h1>
+                        </div>
+                        <div class="wrapper-first-item-right-section">
+                            <p class="parrafo">Empresarios, profesionales independientes, sector académico y todos los
+                                interesados en el sector turismo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-parallax">
+            <div class="wrapper-parallax-bg parallax-1" data-type="wpbg" data-speed="3">
+            </div>
+        </div>
+        <div class="wrapper-third" id="feria">
+            <div class="wrapper-third-section">
+                <h1>Feria Tech</h1>
+                <div class="wrapper-first-item-right-section">
+                    <p class="parrafo">
+                        Conoce las categorías de temas que se abordarán y analizarán
+                        en profundidad durante esta edición de Turismo In Summit.
+                    </p>
+                </div>
+
+                <div class="wrapper-first-item-right-section">
+                    <div class="carousel">
+                        <div class="group">
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);">
+                                <h5>Soluciones tecnológicas</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Certificaciones de sostenibilidad</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales</h5>
+                            </div>
+                        </div>
+                        <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
+                        <div aria-hidden class="group">
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);">
+                                <h5>Soluciones tecnológicas</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Certificaciones de sostenibilidad</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales</h5>
+                            </div>
+                            <div class="card"
+                                style="background: url(https://www.promperu.gob.pe/turismoin/archivos/eventos/eventos-general.png);background-size: cover;">
+                                <h5>Servicios gubernamentales4</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-third" id="conferencias">
+            <div class="wrapper-third-section">
+                <h1>Conferencias y paneles</h1>
+                <div class="wrapper-first-item-right-section">
+                    <p class="parrafo">
+                        Conoce las presentaciones que tendremos, los horarios y
+                        expositores, y reserva tu lugar en las que más te interesen.
+                    </p>
+                </div>
+                <div class="wrapper-first-item-right-section">
+                    <div class="header">
+                        <h1>Conferencias</h1>
+                        <h2>Sala 1</p>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
+                            <h3 class="text-center min">(30 min.)</h3>
+                        </div>
+                        <div class="details text-left">
+                            <h2>Atraer y fidelizar con Big Data</h2>
+                            <p>a cargo de Andrés Salgado, CEO DoMundo Operadora</p>
+                            <div class="buttons">
+                                <a href="ruta_del_archivo_outlook.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
+                            <h3 class="text-center min">(30 min.)</h3>
+                        </div>
+                        <div class="details text-left">
+                            <h2>Atraer y fidelizar con Big Data</h2>
+                            <p>a cargo de Andrés Salgado, CEO DoMundo Operadora</p>
+                            <div class="buttons">
+                                <a href="ruta_del_archivo_outlook.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-first-item-right-section">
+                    <div class="header">
+                        <h1>Paneles</h1>
+                        <h2>Sala 1</p>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
+                            <h3 class="text-center min">(30 min.)</h3>
+                        </div>
+                        <div class="details text-left">
+                            <h2>Una mirada 360° al turista nacional</h2>
+                            <p>a cargo de Andrés Salgado, CEO DoMundo
+                                Operadora</p>
+                            <div class="buttons">
+                                <a href="ruta_del_archivo_outlook.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
+                            <h3 class="text-center min">(30 min.)</h3>
+                        </div>
+                        <div class="details text-left">
+                            <h2>Una mirada 360° al turista nacional</h2>
+                            <p>a cargo de Andrés Salgado, CEO DoMundo
+                                Operadora</p>
+                            <div class="buttons">
+                                <a href="ruta_del_archivo_outlook.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-parallax">
+            <div class="wrapper-parallax-bg parallax-1" data-type="wpbg" data-speed="3">
+            </div>
+        </div>
+        <div class="wrapper-third" id="bloques">
+            <div class="wrapper-third-section">
+                <h1>PONENTES</h1>
+                <!-- <div class="wrapper-first-item-right-section">
+                    <p class="parrafo text-center">
+                        Conoce a todos los profesionales y expertos que nos
+acompañarán en esta edición de Turismo In Summit.
+                    </p>
+                </div> -->
+                <div class="wrapper-first-item-right-section">
+                    <p class="parrafo text-center">
+                        Conoce a todos los profesionales y expertos que nos
+                        acompañarán en esta edición de Turismo In Summit.
+                    </p>
+                </div>
+                
+                <!-- <h2 class="h-texto">        Conoce a todos los profesionales y expertos que nos
+                    acompañarán en esta edición de Turismo In Summit.</h2> -->
+                <div class="wrapper-third-list">
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Emigdio Campos</h2>
+                                <p>Es ingeniero de Sistemas y magíster en Administración de Empresas (univ. San Ignacio
+                                    de Loyola). Tiene más de veinte años de experiencia en tecnología de la información
+                                    aplicada a la analítica de datos, inteligencia comercial y monetización de los
+                                    datos. Es consultor independiente y, desde el 2017, es gerente de Business Analytics
+                                    en Niubiz.</p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Foto_EC_Niubiz_1.jpeg); width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Luis Millan</h2>
+                                <p>Es licenciado en Periodismo y Estudios de la Comunicación (univ. de Valencia, España)
+                                    y MBA (univ. Internacional Menéndez Pelayo, España). Es experto en el comportamiento
+                                    de los viajeros y las tendencias de la industria, por lo que ha sido consultor
+                                    comercial y desarrollador de negocios. En la actualidad es gerente de Investigación
+                                    de Mercado en ForwardKeys.</p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Luis_high_quality-2021-72.jpg); width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Federico Esper</h2>
+                                <p>Es licenciado en Demografía y Turismo (univ. Kennedy, Argentina), máster en Dirección
+                                    y Gestión Turística (univ. de Alicante, España) y máster en Gestión Cultural (univ.
+                                    Complutense, España). Tiene más de veinte años de experiencia en el sector y está
+                                    especializado en inteligencia de mercado y gestión de destinos a nivel
+                                    internacional. Es cofundador y CEO de SOUL DATA.</p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/FedericoEsper.JPG); width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="h-texto">Panel de Big Data</h2>
+                <div class="wrapper-third-list">
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Leandro Baggini</h2>
+                                <p>Es diseñador de videojuegos y experto en innovación y creatividad; tiene diez años de
+                                    experiencia en la industria de gamificación y es el creador de la metodología
+                                    Playtur Journey enfocada en gamificación turística. Es fundador y CEO de Playtur,
+                                    empresa argentina especializada en tecnología para el turismo. </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Leandro_Baggini.jpg); width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Christian Arteaga</h2>
+                                <p>Es CEO de Smart Tourism and Hospitality y tiene más de veinticinco años de
+                                    experiencia en el sector e innovación turística. Es miembro de Meta Foundation y
+                                    Tourithym; este año, ganó el Awake Tourism Challenge de la Organización Mundial del
+                                    Turismo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/CAH.jpg); width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="h-texto">Panel de Destinos Turísticos Inteligentes</h2>
+                <div class="wrapper-third-list">
+                    <!-- <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Jessica López</h2>
+                                <p>Es graduada en Administración de Empresas Turísticas (Institución Universitaria
+                                    Colegio Mayor de Antioquia, Colombia) y aspirante a magíster en Planificación y
+                                    Gestión del Turismo (U. Externado de Colombia). Tiene amplia experiencia en
+                                    planificación turística y docencia universitaria. En la actualidad, es coordinadora
+                                    del Proyecto Medellín Destino Turístico Inteligente.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Jessica_Lopez.jpg); width: 100%;">
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Andrés Ziperovich</h2>
+                                <p>Es licenciado en Hotelería y Turismo (U. Nacional de Quilmes, Argentina),
+                                    especialista en recreación y tiempo libre, planeamiento turístico y turismo
+                                    sostenible. Es Exdirector de Desarrollo Turístico de la Subsecretaría de Turismo de
+                                    la Provincia de Buenos Aires y exdirector de Turismo y Sustentabilidad, Horwath HTL
+                                    Argentina.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Andres_Ziperovich.jpeg); width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Oscar Lucio Bustos Navarta</h2>
+                                <p>Es auditor líder de Sistemas de Gestión de la Calidad ISO 9001y referente técnico
+                                    experimentado en diversos programas de gestión de calidad del Sistema Argentino de
+                                    Calidad Turística (SACT). Es catedrático universitario, promotor de los objetivos de
+                                    desarrollo sostenible y fundador y codirector ejecutivo de la Red Argentina de
+                                    Destinos Turísticos Inteligentes (Red DTI-Ar).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Oscar_Lucio_Bustos_Navarta.jpeg); width: 100%;">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-third-item">
+                        <div class="wrapper-third-item-left">
+                            <div class="wrapper-third-item-left-container">
+                                <h2>Claudia Burga</h2>
+                                <p>Es bachiller en Ciencias Sociales y licenciada en Turismo (U. Nacional de Trujillo) y
+                                    egresada de la maestría en Ecoturismo (U. Nacional Agraria de La Molina). Tiene
+                                    experiencia en gestión de calidad y procesos de certificación a empresas turísticas
+                                    y desarrollo turístico. Es directora de la Dirección de Innovación de la Oferta
+                                    Turística del MINCETUR.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wrapper-third-item-right">
+                            <div class="wrapper-third-item-right-bg"
+                                style="background-image: url(complemento/img/ponentes/Claudia_Burga.jpg); width: 100%; background-position: revert;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-parallax">
+            <div class="wrapper-parallax-bg parallax-1" data-type="wpbg" data-speed="3">
+            </div>
+        </div>
+
+        <div class="wrapper-fourth" id="inscribete-aqui">
+            <div class="wrapper-fourth-section">
+                <h1>Inscríbete SIN COSTO</h1>
+                <p>jueves XXX de NNNN del 2025</p>
+                <p>9:30 a. m. - 1:05 p. m.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform" target="_blank"><strong>¡Quiero inscribirme!</strong></a>
+            </div>
+        </div>
+
+        <!-- <div class="wrapper-third" id="colaboradores">
+            <div class="wrapper-third-section">
+                <h1>Inscríbete SIN COSTO</h1>
+                <div class="wrapper-first-section">
+
+                </div>
+            </div>
+        </div> -->
+        <div class="wrapper-third" id="colaboradores">
+            <div class="wrapper-third-section">
+                <h1>COLABORADORES</h1>
+                <div class="wrapper-first-section">
+                    <div class="wrapper-first-item">
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/mincetur-logo.png">
+                        </div>
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/LogooficialSmArtTHC.png">
+                        </div>
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/Logo-SoulData.png">
+                        </div>
+                    </div>
+                    <div class="wrapper-first-item">
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/Logo-Niubiz.png">
+                        </div>
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/Logo-Forwardkeys.png">
+                        </div>
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/logo_playtur_negro_alta.png">
+                        </div>
+                    </div>
+                    <div class="wrapper-first-item">
+                        <div class="wrapper-first-item-left">
+                            <img class="img" src="complemento/img/colaboradores/logo-Red_DTI_Argentina.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="wrapper-footer">
+            <div class="wrapper-footer-section">
+                <div class="wrapper-footer-left">
+                    <h2>Comisión de Promoción del Perú para la Exportación y el Turismo - PROMPERÚ</h2>
+                    <ul>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <label>Central telefónica: (511) 616 7300 / 616 7400</label>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <label>Calle Uno Oeste 50, edificio Mincetur, pisos 13 y 14, San Isidro -
+                                Lima<br />(51-1)
+                                616 7300. Mesa de Partes (piso 1)<br />De lunes a viernes de 9:00 a 17:00
+                                horas</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper-footer-right">
+                    <h2>¿Necesitas ayuda?</h2>
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send?phone=051980901074" target="_blank"><i
+                                    class="fa fa-whatsapp"></i>+51 980 901 074</a></li>
+                        <li><a href="mailto:Turismoin@promperu.gob.pe" target="_blank"><i
+                                    class="fa fa-envelope-o"></i>Contáctanos</a></li>
+                        <li><img src="complemento/img/ministerio.png"></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="wrapper-copyright">
+            <div class="wrapper-copyright-section">
+                <p><i class="fa fa-copyright"></i> <span></span> - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+    <script src="complemento/libs/jQuery/jQuery.min.js"></script>
+    <script src="complemento/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="complemento/js/menu.js"></script>
+    <script src="complemento/js/home.js"></script>
+    <script src="complemento/js/footer.js"></script>
+    <script src="complemento/js/loading.js"></script>
+
+</body>
+
+</html>

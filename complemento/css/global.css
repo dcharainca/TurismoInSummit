@@ -1,0 +1,52 @@
+@font-face {
+	font-family: 'FC_Bold';
+	src: url(../fonts/FF_Clan_OT_Black.otf);
+}
+
+@font-face {
+	font-family: 'FC_Regular';
+	src: url(../fonts/FF_Clan_OT_Bold.otf);
+}
+
+@font-face {
+	font-family: 'FC_Light';
+	src: url(../fonts/FF_Clan_OT_Book.otf);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #C1C1C1;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: transparent;
+}
+
+.clear {
+	clear: both;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
