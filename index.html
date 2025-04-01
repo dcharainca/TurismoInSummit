@@ -201,6 +201,7 @@
             justify-content: center;
             align-items: start;
             width: 70%;
+            text-align: left;
         }
 
         .details h2 {
@@ -247,6 +248,7 @@
         .button.outlook {
             background-color: #7f3f98;
             color: #fff;
+            margin-bottom: 10px;
         }
 
         .button.google {
@@ -260,6 +262,27 @@
         .text-left {
             text-align: left !important;
         }
+
+
+        @media (max-width: 768px) {
+    .session {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .time, .details {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .time {
+        margin-bottom: 20px;
+    }
+
+    .details{
+        text-align: center;
+    }
+}
     </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -471,7 +494,7 @@
                             <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
                             <h3 class="text-center min">(30 min.)</h3>
                         </div>
-                        <div class="details text-left">
+                        <div class="details">
                             <h2>Atraer y fidelizar con Big Data</h2>
                             <p>a cargo de Andrés Salgado, CEO DoMundo Operadora</p>
                             <div class="buttons">
@@ -489,7 +512,7 @@
                             <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
                             <h3 class="text-center min">(30 min.)</h3>
                         </div>
-                        <div class="details text-left">
+                        <div class="details">
                             <h2>Atraer y fidelizar con Big Data</h2>
                             <p>a cargo de Andrés Salgado, CEO DoMundo Operadora</p>
                             <div class="buttons">
@@ -514,7 +537,7 @@
                             <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
                             <h3 class="text-center min">(30 min.)</h3>
                         </div>
-                        <div class="details text-left">
+                        <div class="details">
                             <h2>Una mirada 360° al turista nacional</h2>
                             <p>a cargo de Andrés Salgado, CEO DoMundo
                                 Operadora</p>
@@ -533,7 +556,7 @@
                             <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
                             <h3 class="text-center min">(30 min.)</h3>
                         </div>
-                        <div class="details text-left">
+                        <div class="details">
                             <h2>Una mirada 360° al turista nacional</h2>
                             <p>a cargo de Andrés Salgado, CEO DoMundo
                                 Operadora</p>
