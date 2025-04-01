@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:20250401T103000Z-1234@example.com
+DTSTAMP:20250401T103000Z
+DTSTART:20250401T103000Z
+DTEND:20250401T110000Z
+SUMMARY:Reunión de ejemplo
+DESCRIPTION:Reunión para discutir temas importantes del proyecto.
+LOCATION:Sala de conferencias A
+ORGANIZER;CN="Juan Pérez":mailto:juan.perez@example.com
+ATTENDEE;CN="María López";RSVP=TRUE:mailto:maria.lopez@example.com
+ATTENDEE;CN="Carlos García";RSVP=TRUE:mailto:carlos.garcia@example.com
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio de la reunión
+END:VALARM
+END:VEVENT
+END:VCALENDAR
