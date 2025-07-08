@@ -35,7 +35,8 @@
     background-position: top;
     background-repeat: no-repeat; 
     /* background-image: url(/complemento/img/Banner/bannerSummit.jpg); */
-    background-image: url(/complemento/img/Banner/bannerNuevo.jpg);
+    /* background-image: url(/complemento/img/Banner/bannerNuevo.jpg); */
+    background-image: url(../img/Banner/bannerNuevo.jpg);        
     animation: zoom 7s ease-in-out infinite alternate;
 }
 
@@ -741,7 +742,7 @@ b{
 
     .wrapper-banner-section-item-bg {   
         /* background-image: url(/complemento/img/Banner/bannerSummit_mobile.jpg); */
-        background-image: url(/complemento/img/Banner/bannerNuevo.jpg);
+        background-image: url(../img/Banner/bannerNuevo.jpg);        
     }
 
     .wrapper-banner-section-item-block {
