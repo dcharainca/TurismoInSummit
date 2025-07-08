@@ -34,7 +34,8 @@
     /* background-position: bottom; */
     background-position: top;
     background-repeat: no-repeat; 
-    background-image: url(/complemento/img/Banner/bannerSummit.jpg);
+    /* background-image: url(/complemento/img/Banner/bannerSummit.jpg); */
+    background-image: url(/complemento/img/Banner/bannerNuevo.jpg);
     animation: zoom 7s ease-in-out infinite alternate;
 }
 
@@ -434,12 +435,30 @@
 }
 
 .parallax-1 {
-	background-image: url(../img/Banner/GettyImages.jpg);
+	background-image: url(../img/Separador/separador_1.jpg);
 }
 
 .parallax-2 {
-	background-image: url(../img/banner3.jpg);
+	background-image: url(../img/Separador/separador_2.jpg);
 }
+
+.parallax-3 {
+	background-image: url(../img/Separador/separador_3.jpg);
+}
+
+.parallax-4 {
+	background-image: url(../img/Separador/separador_4.jpg);
+}
+.parallax-5 {
+	background-image: url(../img/Separador/separador_5.jpg);
+}
+.parallax-6 {
+	background-image: url(../img/Separador/separador_6.jpg);
+}
+
+/* .parallax-2 {
+	background-image: url(../img/banner3.jpg);
+} */
 
 .wrapper-third {
     display: block;
@@ -721,7 +740,8 @@ b{
 
 
     .wrapper-banner-section-item-bg {   
-        background-image: url(/complemento/img/Banner/bannerSummit_mobile.jpg);
+        /* background-image: url(/complemento/img/Banner/bannerSummit_mobile.jpg); */
+        background-image: url(/complemento/img/Banner/bannerNuevo.jpg);
     }
 
     .wrapper-banner-section-item-block {
