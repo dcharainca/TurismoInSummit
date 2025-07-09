@@ -11,7 +11,8 @@
     position: relative;
     width: 100%;
     /* height: 98%; */
-    height: 70%;
+    /* height: 70%; */
+    height: 660px;
 }
 
 .wrapper-banner-section-container {
@@ -796,7 +797,7 @@ b{
         position: relative;
         width: 100%;
         /* height: 50%; */
-        height: 23%;
+        height: 180px;
     }
 
     .wrapper-banner-section-item-block-container {
@@ -1185,7 +1186,8 @@ b{
     .wrapper-banner-section {
         position: relative;
         width: 100%;
-        height: 40%;
+        /* height: 40%; */
+        height: 200px;
     }
 
    
@@ -1612,7 +1614,7 @@ b{
     .wrapper-banner-section {
         position: relative;
         width: 100%;
-        height: 70%;
+        height: 280px;
     }
 
     .wrapper-banner-section-item-block-container h1 {
