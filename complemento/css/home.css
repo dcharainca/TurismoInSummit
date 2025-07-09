@@ -267,7 +267,7 @@
     font-family: 'FC_Regular';
     color: #662483;
     font-weight: normal;
-    font-size: 35px;
+    font-size: 32px;
     display: block;
     line-height: 130%;
     text-align: left;
@@ -282,7 +282,7 @@
 
 .wrapper-first-item-right-section {
     /* display: block; */
-    color: #000 !important;
+    color: #636466 !important;
     padding: 35px 40px;
     padding-top: 20px;
     /* border-radius: 20px;
@@ -482,9 +482,9 @@
 
 .wrapper-third-section h1 {
     font-family: 'FC_Regular';
-    font-size: 45px;
-    font-weight: normal;
-    line-height: 130%;
+    font-size: 32px;
+    /* font-weight: normal; */
+    /* line-height: 130%; */
     text-align: center;
     display: block;
     color: #662483;
@@ -542,7 +542,7 @@
     font-family: 'FC_Regular';
     font-size: 20px;
     color: #662483;
-    line-height: 130%;
+    /* line-height: 130%; */
     display: block;
     text-align: left;
     padding-bottom: 7px;
@@ -551,7 +551,7 @@
 .wrapper-third-item-left-container p {
     font-family: 'FC_Light';
     font-weight: normal;
-    font-size: 13.5px;
+    font-size: 15px;
     line-height: 150%;
     color: #31363a;
     text-align: justify;
@@ -658,9 +658,9 @@
 
 .wrapper-fourth-section h1 {
     font-family: 'FC_Regular';
-    font-size: 35px;
-    font-weight: normal;
-    line-height: 130%;
+    font-size: 32px;
+    /* font-weight: normal; */
+    /* line-height: 130%; */
     text-align: center;
     display: block;
     color: #31363a;
@@ -670,8 +670,8 @@
 .wrapper-fourth-section p {
     font-family: 'FC_Light';
     font-weight: normal;
-    font-size: 17.5px;
-    line-height: 130%;
+    font-size: 15px;
+    /* line-height: 130%; */
     color: #31363a;
     text-align: center;
     padding-top: 5px;
@@ -685,10 +685,10 @@
     display: block;
     color: #fff;
     background: #662483;
-    font-size: 17.5px;
+    font-size: 15px;
     padding: 9px 20px;
     border-radius: 30px;
-    line-height: 130%;
+    /* line-height: 130%; */
     margin: 0 auto;
     margin-top: 20px;
 }

@@ -1,16 +1,18 @@
 @font-face {
 	font-family: 'FC_Bold';
-	src: url(../fonts/FF_Clan_OT_Black.otf);
+	src: url(../fonts/HelveticaNeueLTStd-Cn.OTF);
+	src: url(../fonts/HelveticaNeueLTStd-BdCn.otf);
 }
 
 @font-face {
 	font-family: 'FC_Regular';
-	src: url(../fonts/FF_Clan_OT_Bold.otf);
+	src: url(../fonts/HelveticaNeueLTStd-Md.otf);
+	src: url(../fonts/HelveticaNeueLTStd-Bd.otf);
 }
 
 @font-face {
 	font-family: 'FC_Light';
-	src: url(../fonts/FF_Clan_OT_Book.otf);
+	src: url(../fonts/D-DINExp.otf);
 }
 
 *{

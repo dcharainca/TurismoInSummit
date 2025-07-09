@@ -67,8 +67,8 @@
 }
 
 .wrapper-menu-right ul li a {
-    font-family: 'FC_Light';
-    font-weight: bold;
+    font-family: 'FC_Regular';
+    /* font-weight: bold; */
     font-size: 14px;
     text-decoration: none;
     color: #fff;
