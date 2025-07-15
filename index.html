@@ -1192,7 +1192,7 @@
 
         async function cargarSolucionesTecnologicas() {
             try {
-                const response = await fetch('/complemento/json/dataExpositores.json');
+                const response = await fetch('complemento/json/dataExpositores.json');
                 if (!response.ok) {
                     throw new Error(`Error al cargar el JSON: ${response.statusText}`);
                 }
