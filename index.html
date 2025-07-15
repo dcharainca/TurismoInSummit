@@ -37,6 +37,7 @@
     <link type="text/css" rel="stylesheet" href="complemento/css/menu.css" />
     <link type="text/css" rel="stylesheet" href="complemento/css/home.css" />
     <link type="text/css" rel="stylesheet" href="complemento/css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="complemento/css/empresas.css" />
 
     <!-- Facebook -->
     <meta property="og:type" content="website">
@@ -65,30 +66,16 @@
             overflow: hidden;
             display: flex;
 
-            &:hover .group {
-                animation-play-state: paused;
-            }
         }
 
         .group {
             display: flex;
             gap: 20px;
-            /* Add padding to the right to create a gap between the last and first card. */
             padding-right: 20px;
             will-change: transform;
-            /* We should be nice to the browser - let it know what we're going to animate. */
-            animation: scrolling 10s linear infinite;
         }
 
-        @keyframes scrolling {
-            0% {
-                transform: translateX(0);
-            }
 
-            100% {
-                transform: translateX(-100%);
-            }
-        }
 
         .card {
             width: 230px;
@@ -132,7 +119,7 @@
             right: 0;
             text-align: center;
             font-family: 'FC_Light';
-            /* font-weight: normal; */
+
         }
 
 
@@ -149,7 +136,7 @@
         }
 
         .header h2 {
-            font-size: 30px;
+            font-size: 28px;
             color: #000000;
             font-family: 'FC_Regular';
         }
@@ -215,6 +202,7 @@
         .details p {
             color: #3f3f3f;
             margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .buttons {
@@ -300,7 +288,8 @@
         .carousel-track {
             display: flex;
             width: max-content;
-            animation: scroll-left 50s linear infinite;
+            margin: 0 auto;
+            /* animation: scroll-left 50s linear infinite; */
         }
 
         .carousel-group {
@@ -312,6 +301,9 @@
         .card-wrapper {
             width: 230px;
             flex-shrink: 0;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .carousel {
@@ -322,28 +314,10 @@
             display: flex;
             gap: 20px;
             padding-right: 20px;
-            animation: scrolling 20s linear infinite;
+            /* animation: scrolling 20s linear infinite; */
         }
 
-        @keyframes scrolling {
-            0% {
-                transform: translateX(0);
-            }
 
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
 
         @keyframes tooltipSlideDown {
             0% {
@@ -360,6 +334,7 @@
         .card-wrapper {
             position: relative;
             width: 230px;
+            /* width: 312px; */
         }
 
         .card {
@@ -395,13 +370,17 @@
         }
 
         .info-adicional {
-            display: none;
-            /* Oculto el original */
+            font-family: 'FC_Light';
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 15px;
+            text-align: justify;
+            color: #636466;
         }
 
-        .info-adicional .dato{
+        .info-adicional .dato {
             color: #662483;
-            
+
         }
 
         #tooltip-container {
@@ -412,9 +391,9 @@
             pointer-events: none;
         }
 
-        .carousel-wrapper:hover .group {
+        /* .carousel-wrapper:hover .group {
             animation-play-state: paused;
-        }
+        } */
 
         #tooltip-container .info-adicional {
             position: absolute;
@@ -428,7 +407,7 @@
             pointer-events: auto;
             width: 230px;
             z-index: 999;
-            animation: tooltipSlideDown 0.3s ease-out;
+            /* animation: tooltipSlideDown 0.3s ease-out; */
         }
 
         #tooltip-container .info-adicional::before {
@@ -441,16 +420,161 @@
             border-color: transparent transparent white transparent;
         }
 
-        .carousel-wrapper:hover .carousel-track {
+        /* .carousel-wrapper:hover .carousel-track {
             animation-play-state: paused;
-        }
+        } */
 
         #tooltip-container {
             font-family: 'FC_Light';
-            font-weight: normal;            
+            font-weight: normal;
             line-height: 150%;
             font-size: 15px;
-            
+
+        }
+
+
+        .card {
+            background-size: cover;
+            background-position: center;
+            /* transition: transform 1s ease, background-size 0.6s ease; */
+            /* transition: background-size 3s ease-in-out; */
+            transition: transform 0.5s ease-in-out;
+            position: relative;
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            color: white;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+
+        .card:hover {
+            /* background-size: 110% !important; */
+            transform: scale(1.10);
+
+        }
+
+
+        .card h5 {
+            margin: 0;
+            transition: transform 0.5s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+
+        .card:hover h5 {
+            transform: translateY(-20px);
+        }
+
+
+        .mini-modal {
+            background: white;
+            width: 300px;
+            max-width: 90vw;
+            padding: 1.5rem;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            z-index: 10000;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .mini-content {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .modal-overlay#miniPopup {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+
+
+        /* ponentes y panelistas */
+
+        /* Estructura del carrusel */
+        #ponentesPanelistas .ponentes-carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #ponentesPanelistas .ponentes-carousel-track {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #ponentesPanelistas .ponentes-carousel-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Tarjetas */
+        #ponentesPanelistas .ponente-card-wrapper {
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        #ponentesPanelistas .ponente-nombre {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 312px;
+            color: #662483;
+            font-family: 'FC_Regular';
+        }
+
+        #ponentesPanelistas .ponente-card {
+            position: relative;
+            width: 312px;
+            /* mínimo sugerido */
+            height: 350px;
+            background-size: cover !important;
+            background-position: center !important;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Descripción animada */
+        #ponentesPanelistas .ponente-card-wrapper .ponente-descripcion {
+            position: absolute;
+            bottom: -100%;
+            /* oculto al inicio */
+            left: 0;
+            width: 100%;
+            min-width: 312px;
+            margin: 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0;
+            transition: bottom 0.7s ease, opacity 0.2s ease;
+            box-sizing: border-box;
+
+            font-family: 'FC_Light';
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 15px;
+            /* text-align: justify; */
+            border-radius: 12px;
+        }
+
+        /* Al hacer hover, sube el texto */
+        #ponentesPanelistas .ponente-card-wrapper:hover .ponente-descripcion {
+            bottom: 0;
+            opacity: 1;
         }
     </style>
 
@@ -481,11 +605,11 @@
                 <div class="wrapper-menu-right">
                     <ul>
                         <li><a href="#que-es" class="linkeo">Turismo In Summit</a></li>
-                        <li><a href="#programa" class="linkeo">Feria Tech</a></li>
-                        <li><a href="#bloques" class="linkeo">Conferencia y paneles</a></li>
-                        <li><a href="#colaboradores" class="linkeo">Ponente</a></li>
-                        <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform"
+                        <li><a href="#programa" class="linkeo">Directorio de expositores</a></li>
+                        <li><a href="#bloques" class="linkeo">Conferencias y paneles</a></li>
+                        <li><a href="#colaboradores" class="linkeo">Ponentes</a></li>
+                        <!-- <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li> -->
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
                                 target="_blank">Inscríbete aquí</a></li>
                         <li><a href="javascript:;" class="btnMenuBar"><i class="fa fa-bars"></i></a></li>
                     </ul>
@@ -506,7 +630,7 @@
                         <li><a href="#bloques" class="linkeo">Conferencia y paneles</a></li>
                         <li><a href="#colaboradores" class="linkeo">Ponente</a></li>
                         <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform"
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
                                 target="_blank">Inscríbete aquí</a></li>
                     </ul>
                 </div>
@@ -524,24 +648,20 @@
         </div>
         <div class="wrapper-first" id="que-es">
             <div class="wrapper-first-section" style="padding-top: 50px;">
+                <h1>Primera feria de soluciones innovadoras para el futuro de turismo</h1>
                 <div class="wrapper-first-item">
                     <div class="wrapper-second-item-left">
                         <img src="complemento/img/iconos/foco.png">
                     </div>
                     <div class="wrapper-first-item-right">
                         <div class="wrapper-first-item-left">
-                            <h1>Turismo In Summit</h1>
+                            <h1>¿Que és Turismo In Summit?</h1>
                         </div>
                         <div class="wrapper-first-item-right-section">
 
                             <p class="parrafo">
-                                El evento reúne a expertos, empresas y emprendedores del sector para abordar temas
-                                especializados en
-                                soluciones, estrategias y herramientas de innovación tecnológica aplicadas al turismo.
-                                También incluye
-                                seminarios con profesionales de primer nivel, una feria con proveedores de soluciones
-                                tecnológicas,
-                                espacios de ‘networking’ y oportunidades de formación a cargo de PROMPERÚ, entre otros.
+                                Es la primera feria de herramientas para la transformación digital e innovación
+                                enfocada exclusivamente en proveedores de servicios turísticos del Perú.
                                 </b></p>
                         </div>
                     </div>
@@ -553,16 +673,78 @@
 
                     <div class="wrapper-first-item-right">
                         <div class="wrapper-first-item-left">
-                            <h1>¿Quiénes pueden participar?</h1>
+                            <h1>¿Quienes son los expositores?</h1>
                         </div>
                         <div class="wrapper-first-item-right-section">
-                            <p class="parrafo">Empresarios, profesionales independientes, sector académico y todos los
-                                interesados en el sector turismo.
+                            <p class="parrafo">Organismos privados y públicos que impulsan la digitalización y
+                                competitividad de las
+                                mipymes turísticas nacionales. Entre los expositores habrá representantes de empresas de
+                                soluciones
+                                tecnológicas, certificadoras de sostenibilidad y servicios gubernamentales (PROMPERÚ,
+                                MINCETUR, Presidencia
+                                del Consejos de Ministros y PRODUCE, entre otros).
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="wrapper-first-item">
+                    <div class="wrapper-second-item-left">
+                        <img src="complemento/img/iconos/podio.png">
+                    </div>
+                    <div class="wrapper-first-item-right">
+                        <div class="wrapper-first-item-left">
+                            <h1>¿De qué se tratan los seminarios?</h1>
+                        </div>
+                        <div class="wrapper-first-item-right-section">
+                            <p class="parrafo">
+                                Habrá ponencias y conversatorios con expertos que compartirán sus experiencias respecto
+                                al impacto de la
+                                digitalización, la recolección de datos turísticos mediante Big Data, la adopción de la
+                                inteligencia artificial,
+                                ventas digitales, retos en la digitalización de mipymes y más.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-first-item">
+                    <div class="wrapper-second-item-left">
+                        <img src="complemento/img/iconos/podio.png">
+                    </div>
+                    <div class="wrapper-first-item-right">
+                        <div class="wrapper-first-item-left">
+                            <h1>¿Quienes pueden participar?</h1>
+                        </div>
+                        <div class="wrapper-first-item-right-section">
+                            <p class="parrafo">
+                                Empresarios, profesionales independientes, actores del sector académico y todos los
+                                interesados en el sector turismo.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="wrapper-first-item">
+                    <div class="wrapper-second-item-left">
+                        <img src="complemento/img/iconos/podio.png">
+                    </div>
+                    <div class="wrapper-first-item-right">
+                        <div class="wrapper-first-item-left">
+                            <h1>¿Cuándo y dónde?</h1>
+                        </div>
+                        <div class="wrapper-first-item-right-section">
+                            <p class="parrafo">
+                                Miércoles 3 de septiembre de 2025, de 09:00 a. m. a 7:00 p. m., en el Centro de
+                                Convenciones de
+                                Lima (av. de la Arqueología 206, San Borja).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
         <div class="wrapper-parallax">
             <div class="wrapper-parallax-bg parallax-1" data-type="wpbg" data-speed="3">
@@ -570,7 +752,7 @@
         </div>
         <div class="wrapper-third" id="feria">
             <div class="wrapper-third-section">
-                <h1>Feria Tech</h1>
+                <h1>Directorio de expositores</h1>
                 <div class="wrapper-first-item-right-section">
                     <p class="parrafo">
                         Conoce las categorías de temas que se abordarán y analizarán
@@ -583,558 +765,33 @@
                     <div class="carousel-wrapper">
                         <div class="carousel-track">
                             <div class="carousel-group">
-                                
-
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTourcert.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>TourCert Perú</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Geraldyne Longoria Malmaceda</p>
-                                        <p>
-                                            <a href="https://tourcertlatinoamerica.org/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Geraldyne Longoria Malmaceda</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Coordinadora nacional</p>
-                                        <p>geraldyne.longoria@tourcert.org</p>
+                                <div class="card-wrapper"
+                                    onclick="abrirPopup('Empresas de soluciones digitales','divSolucionesTecnologicas')">
+                                    <div class="card"
+                                        style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
+                                        <div class="overlay"></div>
+                                        <h5>Empresas de soluciones digitales</h5>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lBM.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Bookingmotor by Carrusel</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Fiorela Rojas Ramirez</p>
-                                        <p>
-                                            <a href="www.bookingmotor.com" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Fiorela Rojas Ramirez</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Coordinadora de Atención al Cliente</p>
-                                        <p>fiorela@bookingmotor.com</p>
+                                <div class="card-wrapper"
+                                    onclick="abrirPopup('Servicios gubernamentales','divServiciosGubernamentales')">
+                                    <div class="card"
+                                        style="background: url(complemento/img/Carrousel/ServiciosGubernamentales.jpg);">
+                                        <div class="overlay"></div>
+                                        <h5>Servicios gubernamentales</h5>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Artesanías del Perú</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Bélgica Chambi</p>
-                                        <p>
-                                            <a href="https://www.artesaniasdelperu.gob.pe/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Bélgica Chambi</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Profesional de la Dirección de Desarrollo Artesanal</p>
-                                        <p>servicios_dda45@mincetur.gob.pe</p>
+                                <div class="card-wrapper"
+                                    onclick="abrirPopup('Certificadoras de sostenibilidad','divImagenCertificaciones')">
+                                    <div class="card"
+                                        style="background: url(complemento/img/Carrousel/SolucionesTecnologicas.jpg);">
+                                        <div class="overlay"></div>
+                                        <h5>Certificadoras de sostenibilidad</h5>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Metacerv</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Roy Guzman</p>
-                                        <p>
-                                            <a href="https://metacerv.com/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Roy Guzman</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>CEO</p>
-                                        <p>roy.guzman@metacerv.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lFns.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>FNSrooms</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Yonathan De Paz Gallardo</p>
-                                        <p>
-                                            <a href="https://www.fnsrooms.com/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Yonathan De Paz Gallardo</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Country Manager Perú FNSrooms</p>
-                                        <p>ydepaz@fnsrooms.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTurbox.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>TurBox Go</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Mariella Sperduti</p>
-                                        <p>
-                                            <a href="https://nextsmart.solutions/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Mariella Sperduti</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Coordinadora de proyectos</p>
-                                        <p>ptoyectos@nextsmart.solutions</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Dynamics by peruinkasico</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Edison Rojas</p>
-                                        <p>
-                                            <a href="dynamicspro.online" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Edison Rojas</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Lider Ecomerce</p>
-                                        <p>online@peruinkasico.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lLabPUCP.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>LabXR PUCP</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Andres Leon Geyer</p>
-                                        <p>
-                                            <a href="labxr.pucp.edu.pe" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Andres Leon Geyer</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Jefe de Laboratorio</p>
-                                        <p>leongeyer@pucp.edu.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lWetravel.svg);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>WeTravel</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Francisco Bonilla</p>
-                                        <p>
-                                            <a href="https://www.wetravel.com/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Francisco Bonilla</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Account Executive - LATAM</p>
-                                        <p>francisco.bonilla@wetravel.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lWuayruro.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Wuayruro Tech </h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Hernan Suclla </p>
-                                        <p>
-                                            <a href="https://web.wuayruro.com/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Hernan Suclla </p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>CEO</p>
-                                        <p>hernan@wuayruro.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lAtix.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>ATIX</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Rodrigo Daniel Escobar Fernandez</p>
-                                        <p>
-                                            <a href="www.atix.com.pe" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Rodrigo Daniel Escobar Fernandez</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>JEFE NEGOCIOS</p>
-                                        <p>rodrigoe@atix.com.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Shopify X Cluster </h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Nicolás Cabieses</p>
-                                        <p>
-                                            <a href="Https://cluster.global" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Nicolás Cabieses</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Director General</p>
-                                        <p>Nicolas@cluster.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTurtech.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Turtech | SebTundis</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Sebastián José Tundis</p>
-                                        <p>
-                                            <a href="turtech.travel" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Sebastián José Tundis</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Sebastián José Tundis</p>
-                                        <p>+54 9 11 3075-9614</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lStringnet.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Stringnet multimedia system sac</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Manuel Valladares Mendoza </p>
-                                        <p>
-                                            <a href="https://www.stringnet.pe" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Manuel Valladares Mendoza </p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Ejecutivo de cuentas </p>
-                                        <p>manuel@stringnet.pe </p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lPcm.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Secretaria de gobierno y transformación digital</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Paolo Alegría Granados</p>
-                                        <p>
-                                            <a href="https://www.gob.pe/transformaciondigital" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Paolo Alegría Granados</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Especialista en Talento Digitial</p>
-                                        <p>palegria@pcm.gob.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Cenfotur - Fortalecimiento de competencias</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>NO APLICA</p>
-                                        <p>
-                                            <a href="WWW.CENFOTUR.EDU.PE" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>NO APLICA</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>NO APLICA</p>
-                                        <p>NO APLICA</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Biosphere</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Andres Torregrosa</p>
-                                        <p>
-                                            <a href="https://www.biospheretourism.com/es" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Andres Torregrosa</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Responsable Biosphere Latam</p>
-                                        <p>andres@turtech.travel</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>SmArt THC</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Christian Arteaga</p>
-                                        <p>
-                                            <a href="https://smart-thc.com/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Christian Arteaga</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>CEO</p>
-                                        <p>carteaga@smart-thc.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Izitoor</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Erick Coronado</p>
-                                        <p>
-                                            <a href="http://www.izitoor.pro/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Erick Coronado</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Gerente General</p>
-                                        <p>coronado.erick96@gmail.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Niubiz</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Emigdio Campos</p>
-                                        <p>
-                                            <a href="https://www.niubiz.com.pe/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Emigdio Campos</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Gerente de BUSINESS ANALYTICS Y BIG DATA</p>
-                                        <p>ecampos@niubiz.com.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Fábrica 360</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Rodrigo Rodrich Portugal</p>
-                                        <p>
-                                            <a href="https://www.fabrica360.pe/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Rodrigo Rodrich Portugal</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Gerente General</p>
-                                        <p>rodrigo@fabrica360.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Aula Virtual MINCETUR</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Johana Lizbeth Mesinas Menacho</p>
-                                        <p>
-                                            <a href="https://aulavirtual.mincetur.gob.pe/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Johana Lizbeth Mesinas Menacho</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Especialista en turismo</p>
-                                        <p>servicios_dpdt278@mincetur.gob.pe</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTourcert.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Bosques Tropicales - Profonanpe</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Cecilia Huamanchumo De la Cuba</p>
-                                        <p>
-                                            <a href="https://profonanpe.org.pe/bosquestropicales/" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Cecilia Huamanchumo De la Cuba</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Jefa del proyecto Bosques Tropicales </p>
-                                        <p>chuamanchumo@profonanpe.org.pe </p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lDynamics.jpeg)">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Inmerzum</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Henry Lara</p>
-                                        <p>
-                                            <a href="www.inmerzum.com" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Henry Lara</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Director</p>
-                                        <p>henrylara@internovam.com</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTourcert.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Blustay.io</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Estefany Escobar</p>
-                                        <p>
-                                            <a href="https://blustay.io/home/6 | https://blustay.io/home/6/funcionalidades-hoteles" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Estefany Escobar</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Ejecutiva Comercial</p>
-                                        <p>ventas@blustay.io</p>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="card-wrapper">
-                                    <div class="card" style="background: url(complemento/img/Empresas/lTravelBot.png);">
-                                        <div class="overlay"></div>                                        
-                                        <h5>Travelbot</h5>
-                                    </div>
-                                    <div class="info-adicional">
-                                        <p class="dato">Expositor: </p>                                        
-                                        <p>Matias Ramon Jerbic</p>
-                                        <p>
-                                            <a href="travelbot.la" target="_blank">Página web</a>
-                                        </p>                                                                                    
-                                        <p class="dato">Contacto: </p>
-                                        <p>Matias Ramon Jerbic</p>
-                                        <p class="dato">Cargo: </p>
-                                        <p>Matias Ramon Jerbic</p>
-                                        <p>matias@travelbot.la</p>
-                                    </div>
-                                </div>
-                                
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -1142,39 +799,21 @@
             <div class="wrapper-third-section">
                 <h1>Conferencias y paneles</h1>
                 <div class="wrapper-first-item-right-section">
-                    <p class="parrafo">
+                    <p class="parrafo text-center">
                         Conoce las presentaciones que tendremos, los horarios y
-                        expositores, y reserva tu lugar en las que más te interesen.
+                        expositores, y reserva tu lugar en las que más te interesen
                     </p>
                 </div>
                 <div class="wrapper-first-item-right-section">
                     <div class="header">
                         <h1>Conferencias</h1>
-                        <h2>Sala 1</p>
+                        <h2>Sala Lima 1</p>
                     </div>
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
-                        </div>
-                        <div class="details">
-                            <h2>El impacto de la digitalización en la vida y el consumo en el Perú</h2>
-                            <p>a cargo de Javier Alvarez Pecol</p>
-                            <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
-                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
-                                    Calendar</a>
-                            </div>
-                        </div>
-                    </div>
+                            <h3 class="text-center hour">10:00 a. m. - 11:00 a. m.</h3>
 
-                    <div class="session">
-                        <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
                         </div>
                         <div class="details">
                             <h2>Datos turísticos mediante Big Data y cómo aprovecharlo</h2>
@@ -1182,7 +821,43 @@
                             <div class="buttons">
                                 <a href="reunionEjemplo.ics" class="button outlook text-center"
                                     download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Datos+tur%C3%ADsticos+mediante+Big+Data+y+c%C3%B3mo+aprovecharlo&dates=20250903T150000Z/20250903T160000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">11:00 a. m. - 12:00 p. m.</h3>
+
+                        </div>
+                        <div class="details">
+                            <h2>Inteligencia Artificial y su aplicación al sector Turismo</h2>
+                            <p>a cargo de Edison Medina La Plata</p>
+                            <div class="buttons">
+                                <a href="reunionEjemplo.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Inteligencia+Artificial+y+su+aplicaci%C3%B3n+al+sector+Turismo&dates=20250903T160000Z/20250903T170000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">12:00 p. m. - 01:00 p. m.</h3>
+
+                        </div>
+                        <div class="details">
+                            <h2>El impacto de la digitalización en la vida y el consumo en el Perú</h2>
+                            <p>a cargo de Javier Alvarez Pecol</p>
+                            <div class="buttons">
+                                <a href="reunionEjemplo.ics" class="button outlook text-center"
+                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=El+impacto+de+la+digitalizaci%C3%B3n+en+la+vida+y+el+consumo+en+el+Per%C3%BA&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
@@ -1190,11 +865,11 @@
                     </div>
 
 
-                    <div class="header">
+                    <!-- <div class="header">
                         <h2>Sala 2</p>
-                    </div>
+                    </div> -->
 
-                    <div class="session">
+                    <!-- <div class="session">
                         <div class="time">
                             <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
                             <h3 class="text-center min">(30 min.)</h3>
@@ -1210,30 +885,31 @@
                                     Calendar</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="wrapper-first-item-right-section">
                     <div class="header">
                         <h1>Paneles</h1>
-                        <h2>Sala 1</p>
+                        <h2>Sala Lima 1</p>
                     </div>
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
+                            <h3 class="text-center hour">03:00 p. m. - 04:00 p. m.</h3>
                         </div>
                         <div class="details">
                             <h2>¿Cómo impulsar las ventas digitales?</h2>
                             <p>A cargo de:</p>
-                            <p>- Nicolás Cabieses - Cluster 🇵🇪</p>
-                            <p>- Seb Tundis - Turtech 🇦🇷</p>
-                            <p>- Luiggi Castagnino - Restaurante.pe 🇵🇪</p>
+                            <p>- Nicolás Cabieses - Cluster (Perú)</p>
+                            <p>- Seb Tundis - Turtech (Argentina)</p>
+                            <p>- José Carlos Plaza - Bookingmotor by Carrusel (Perú)</p>
+                            <p>- José Garin - TurBox Go (Uruguay)</p>
+
                             <div class="buttons">
                                 <a href="reunionEjemplo.ics" class="button outlook text-center"
                                     download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%C2%BFC%C3%B3mo+impulsar+las+ventas+digitales%3F&dates=20250903T200000Z/20250903T210000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
@@ -1242,41 +918,18 @@
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
+                            <h3 class="text-center hour">04:00 p. m. - 05:00 p. m.</h3>
                         </div>
                         <div class="details">
                             <h2>Sostenibilidad y la competitividad turística</h2>
                             <p>A cargo de:</p>
-                            <p>- Andrés Torregrosa - Biosphere 🇪🇸</p>
-                            <p>- Rodrigo Cabrera - Tourcert 🇩🇪</p>
-                            <p>- Katherine Castañeda - Profonampe 🇵🇪</p>
+                            <p>- Andrés Torregrosa - Biosphere (España)</p>
+                            <p>- Rodrigo Cabrera - Tourcert (Alemania)</p>
+                            <p>- Katherine Castañeda - Profonampe (Perú)</p>
                             <div class="buttons">
                                 <a href="reunionEjemplo.ics" class="button outlook text-center"
                                     download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
-                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
-                                    Calendar</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="session">
-                        <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
-                        </div>
-                        <div class="details">
-                            <h2>Servicios gubernamentales para impulsar la digitalización</h2>
-                            <p>A cargo de:</p>
-                            <p>- Jenniffer Duran - Produce 🇵🇪</p>
-                            <p>- Nieves - Cenfotur 🇵🇪</p>
-                            <p>- Krystel Carranza - Proinnovate 🇵🇪</p>
-                            <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
@@ -1291,16 +944,72 @@
         </div>
         <div class="wrapper-third" id="bloques">
             <div class="wrapper-third-section">
-                <h1>PONENTES</h1>
+                <h1>PONENTES Y PANELISTAS</h1>
                 <div class="wrapper-first-item-right-section">
                     <p class="parrafo text-center">
                         Conoce a todos los profesionales y expertos que nos
-                        acompañarán en esta edición de Turismo In Summit.
+                        acompañarán en esta edición de Turismo In Summit
                     </p>
                 </div>
 
+                <!-- <div class="wrapper-third-list"> -->
                 <div class="wrapper-third-list">
-                    <div class="wrapper-third-item">
+                    <div id="ponentesPanelistas">
+                        <div class="ponentes-carousel-wrapper">
+                            <div class="ponentes-carousel-track">
+                                <div class="ponentes-carousel-group">
+
+                                    <div class="ponente-card-wrapper">
+                                        <div class="ponente-card"
+                                            style="background: url(complemento/img/ponentes/EmigdioCampos.jpg);">
+
+                                            <p class="ponente-descripcion">
+                                                Presidente de la Asociación Peruana de Empresas de Inteligencia de
+                                                Mercados (APEIM) y
+                                                director de Tendencias del Consumidor en Ipsos, con más de 35 años de
+                                                experiencias en
+                                                investigación de mercados y comportamiento del consumidor peruano.
+                                            </p>
+                                        </div>
+                                        <p class="ponente-nombre"> Emigdio Campos Diaz</p>
+                                    </div>
+
+                                    <div class="ponente-card-wrapper">
+                                        <div class="ponente-card"
+                                            style="background: url(complemento/img/ponentes/JavierAlvarezPecol.jpg);">
+
+                                            <p class="ponente-descripcion">
+                                                Gerente de Business Analytics en Niubiz, con más de 20 años de
+                                                experiencia liderando equipos y proyectos
+                                                de analítica avanzada en banca, ‘retail’ y medios de pago con el
+                                                propósito de generar valor a través del uso
+                                                estratégico de datos.
+                                            </p>
+                                        </div>
+                                        <p class="ponente-nombre">Javier Alvarez Pecol</p>
+                                    </div>
+
+                                    <div class="ponente-card-wrapper">
+                                        <div class="ponente-card"
+                                            style="background: url(complemento/img/ponentes/EmigdioCampos.jpg);">
+                                            <p class="ponente-descripcion">
+                                                Gerente de XXXXX, empresa de soluciones basadas en el uso estratégico de
+                                                datos. Es MBA, docente y director de cursos
+                                                y programas en gestión de datos en la UPC Posgrado, con más de 15 años
+                                                de experiencia nacional e internacional.
+                                            </p>
+                                        </div>
+                                        <p class="ponente-nombre">Edison Medina La Plata</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="wrapper-third-item">
                         <div class="wrapper-third-item-left">
                             <div class="wrapper-third-item-left-container">
                                 <h2>Javier Alvarez Pecol</h2>
@@ -1363,43 +1072,9 @@
                                 style="background-image: url(complemento/img/ponentes/FedericoEsper.JPG); width: 100%;">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <h2 class="h-texto">Panel de XXXXX XXXXX</h2>
-                <div class="wrapper-third-list">
-                    <div class="wrapper-third-item">
-                        <div class="wrapper-third-item-left">
-                            <div class="wrapper-third-item-left-container">
-                                <h2>XXXXXX XXXXXX</h2>
-                                <p>Es diseñador de videojuegos y experto en innovación y creatividad; tiene diez años de
-                                    experiencia en la industria de gamificación y es el creador de la metodología
-                                    Playtur Journey enfocada en gamificación turística. Es fundador y CEO de Playtur,
-                                    empresa argentina especializada en tecnología para el turismo. </p>
-                            </div>
-                        </div>
-                        <div class="wrapper-third-item-right">
-                            <div class="wrapper-third-item-right-bg"
-                                style="background-image: url(complemento/img/ponentes/Leandro_Baggini.jpg); width: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper-third-item">
-                        <div class="wrapper-third-item-left">
-                            <div class="wrapper-third-item-left-container">
-                                <h2>XXXXXX XXXXXX</h2>
-                                <p>Es CEO de Smart Tourism and Hospitality y tiene más de veinticinco años de
-                                    experiencia en el sector e innovación turística. Es miembro de Meta Foundation y
-                                    Tourithym; este año, ganó el Awake Tourism Challenge de la Organización Mundial del
-                                    Turismo.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="wrapper-third-item-right">
-                            <div class="wrapper-third-item-right-bg"
-                                style="background-image: url(complemento/img/ponentes/CAH.jpg); width: 100%;"></div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class="wrapper-parallax">
@@ -1410,9 +1085,9 @@
         <div class="wrapper-fourth" id="inscribete-aqui">
             <div class="wrapper-fourth-section">
                 <h1>Inscríbete SIN COSTO</h1>
-                <p>jueves XXX de NNNN del 2025</p>
-                <p>9:30 a. m. - 1:05 p. m.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScTgP6XIhyxBjhjH_wQs43Rka6b6cwO-RHnNkF3WK7i2J7Igw/viewform"
+                <p>miércoles 3 de septiembre del 2025</p>
+                <p>desde las 9:00 a. m.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
                     target="_blank"><strong>¡Quiero inscribirme!</strong></a>
             </div>
         </div>
@@ -1421,44 +1096,6 @@
             <div class="wrapper-parallax-bg parallax-4" data-type="wpbg" data-speed="3">
             </div>
         </div>
-
-
-        <div class="wrapper-third" id="colaboradores">
-            <div class="wrapper-third-section">
-                <h1>COLABORADORES</h1>
-                <div class="wrapper-first-section">
-                    <div class="wrapper-first-item">
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/mincetur-logo.png">
-                        </div>
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/LogooficialSmArtTHC.png">
-                        </div>
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/Logo-SoulData.png">
-                        </div>
-                    </div>
-                    <div class="wrapper-first-item">
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/Logo-Niubiz.png">
-                        </div>
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/Logo-Forwardkeys.png">
-                        </div>
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/logo_playtur_negro_alta.png">
-                        </div>
-                    </div>
-                    <div class="wrapper-first-item">
-                        <div class="wrapper-first-item-left">
-                            <img class="img" src="complemento/img/colaboradores/logo-Red_DTI_Argentina.jpeg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
 
 
         <div class="wrapper-footer">
@@ -1497,6 +1134,47 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="modal-overlay" id="popupModalCertificaciones">
+        <div class="modal-content">
+            <h1 id="TituloPopup"> </h1>
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div class="image-grid" id="divImagenCertificaciones">
+
+            </div>
+            <div class="image-grid" id="divServiciosGubernamentales">
+
+
+            </div>
+            <div class="image-grid" id="divSolucionesTecnologicas">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="miniPopup" style="background: rgba(0, 0, 0, 0.4); display: none;">
+        <div class="mini-modal">
+            <button class="close-btn" onclick="closeMiniPopup()">×</button>
+            <div class="mini-content">
+                <div class="info-adicional">
+                    <p class="dato">Expositor: </p>
+                    <p class="pExpositor">Mariella Sperduti</p>
+                    <p>
+                        <a class="aPaginaWeb" href="https://nextsmart.solutions/" target="_blank">Página web</a>
+                    </p>
+                    <p class="dato">Contacto: </p>
+                    <p class="pContacto"> Mariella Sperduti</p>
+                    <p class="dato">Cargo: </p>
+                    <p class="pCargo">Coordinadora de proyectos</p>
+                    <p class="pCorreo">ptoyectos@nextsmart.solutions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="tooltip-container"></div>
     <script src="complemento/libs/jQuery/jQuery.min.js"></script>
     <script src="complemento/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -1505,60 +1183,151 @@
     <script src="complemento/js/footer.js"></script>
     <script src="complemento/js/loading.js"></script>
 
+
     <script>
-        const tooltipContainer = document.getElementById('tooltip-container');
+        const modal = document.getElementById('popupModalCertificaciones');
+        const contenidosImagenes = document.getElementsByClassName('image-grid');
+        const miniPopup = document.getElementById('miniPopup');
+        var dataJson;
 
-        function showTooltip(card, info) {
-            const rect = card.getBoundingClientRect();
+        async function cargarSolucionesTecnologicas() {
+            try {
+                const response = await fetch('/complemento/json/dataExpositores.json');
+                if (!response.ok) {
+                    throw new Error(`Error al cargar el JSON: ${response.statusText}`);
+                }
 
-            const tooltip = info.cloneNode(true);
-            tooltip.classList.add('info-adicional');
+                const data = await response.json();
+                dataJson = data;
+                const contenedorSolTech = document.getElementById('divSolucionesTecnologicas');
+                const contenedorCertifi = document.getElementById('divImagenCertificaciones');
+                const contenedorSerGube = document.getElementById('divServiciosGubernamentales');
+                contenedorSolTech.innerHTML = "";
+                contenedorCertifi.innerHTML = "";
+                contenedorSerGube.innerHTML = "";
 
-            tooltip.style.left = `${rect.left + window.scrollX}px`;
-            tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+                data.filter(item => item.Categoria === "SolucionesTecnologicas")
+                    .forEach(item => {
+                        const img = document.createElement('img');
+                        img.src = `/complemento/img/Empresas/${item.RUC}.png`;
+                        img.alt = item.NombreComercial || "Empresa";
+                        img.addEventListener("click", () => {
+                            detalleEmpresa(item.RUC);
+                        });
+                        contenedorSolTech.appendChild(img);
+                    });
 
-            tooltipContainer.innerHTML = '';
-            tooltipContainer.appendChild(tooltip);
-        }
+                data.filter(item => item.Categoria === "CertificacionesSostenibilidad")
+                    .forEach(item => {
+                        const img = document.createElement('img');
+                        img.src = `/complemento/img/Empresas/${item.RUC}.png`;
+                        img.alt = item.NombreComercial || "Empresa";
+                        img.addEventListener("click", () => {
+                            detalleEmpresa(item.RUC);
+                        });
+                        contenedorCertifi.appendChild(img);
+                    });
 
-        function hideTooltip() {
-            tooltipContainer.innerHTML = '';
-        }
+                data.filter(item => item.Categoria === "ServiciosGubernamentales")
+                    .forEach(item => {
+                        const img = document.createElement('img');
+                        img.src = `/complemento/img/Empresas/${item.RUC}.png`;
+                        img.alt = item.NombreComercial || "Empresa";
+                        img.addEventListener("click", () => {
+                            detalleEmpresa(item.RUC);
+                        });
+                        contenedorSerGube.appendChild(img);
+                    });
 
-        function attachTooltipEventsToCards() {
-            document.querySelectorAll('.card-wrapper').forEach(wrapper => {
-                const card = wrapper.querySelector('.card');
-                const info = wrapper.querySelector('.info-adicional');
-
-                if (!card || !info) return;
-
-                card.addEventListener('mouseenter', () => showTooltip(card, info));
-                card.addEventListener('mouseleave', hideTooltip);
-                card.addEventListener('click', e => {
-                    e.stopPropagation();
-                    showTooltip(card, info);
-                });
-            });
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const group = document.querySelector('.carousel-group');
-            if (group) {
-                const clone = group.cloneNode(true);
-                document.querySelector('.carousel-track').appendChild(clone);
-
-                setTimeout(() => {
-                    attachTooltipEventsToCards();
-                }, 100);
+            } catch (error) {
+                console.error("Error al generar las imágenes:", error);
             }
+        }
 
-            // Inicial
-            attachTooltipEventsToCards();
+
+        function abrirPopup(categoria, tipoContenido) {
+            ocultarContenidoPopup();
+            document.getElementById(tipoContenido).style.display = "grid";
+            modal.style.display = 'flex';
+            document.getElementById("TituloPopup").innerText = categoria;
+        }
+
+        function closeModal() {
+            ocultarContenidoPopup();
+            document.getElementById("TituloPopup").innerText = "";
+            modal.style.display = 'none';
+        }
+
+        function ocultarContenidoPopup() {
+            for (let i = 0; i < contenidosImagenes.length; i++) {
+                contenidosImagenes[i].style.display = 'none';
+            }
+        }
+
+        function abrirMiniPopup() {
+            miniPopup.style.display = 'flex';
+        }
+
+        function closeMiniPopup() {
+            miniPopup.style.display = 'none';
+        }
+        function detalleEmpresa(ruc) {
+            const empresa = dataJson.find(item => item.RUC == ruc);
+            if (!empresa) {
+                console.error("No se encontró la empresa con RUC:", ruc);
+                return;
+            }
+            document.querySelector(".pExpositor").textContent = empresa.Expositor || "";
+
+            const paginaWeb = document.querySelector(".aPaginaWeb");
+            paginaWeb.href = empresa.PaginaWeb || "#";
+            paginaWeb.textContent = empresa.PaginaWeb ? "Página web" : "Sin página";
+
+            document.querySelector(".pContacto").textContent = empresa.CorreoContactoEmpresa || "";
+            document.querySelector(".pCargo").textContent = empresa.Cargo || "";
+            document.querySelector(".pCorreo").textContent = empresa.Correo || "";
+
+            // pExpositor
+            // aPaginaWeb
+            // pContacto
+            // pCargo
+            // pCorreo
+            abrirMiniPopup();
+
+
+        }
+
+        document.addEventListener("DOMContentLoaded", cargarSolucionesTecnologicas);
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                if (miniPopup.style.display === "flex") {
+                    closeMiniPopup();
+                    return;
+                }
+                closeModal();
+            }
         });
 
-        document.addEventListener('click', hideTooltip);
-    </script>
+        document.querySelectorAll(".modal-overlay").forEach(overlay => {
+            overlay.addEventListener("click", function (event) {
+                if (event.target !== overlay) return;
+                if (miniPopup.style.display === "flex") {
+                    closeMiniPopup();
+                    return;
+                }
+                closeModal();
+            });
+        });
 
+        // document.addEventListener('keydown', function (e) {
+        //     if (e.key === 'Escape') {
+        //         closeModal();
+        //     }
+        // });
+
+
+
+    </script>
 
 </body>
 
