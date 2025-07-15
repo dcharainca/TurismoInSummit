@@ -82,7 +82,8 @@
     background: #662483;
     border-radius: 7px;
     margin-left: 20px;
-    padding: 12px 30px;
+    /* padding: 12px 30px; */
+    padding: 15px 35px;
     font-size: 13.5px;
 }
 
