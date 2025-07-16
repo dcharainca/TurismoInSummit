@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TurismoIn Summit//ES
+BEGIN:VEVENT
+SUMMARY:Inteligencia Artificial y su aplicación al sector Turismo
+DESCRIPTION:TurismoIn Summit
+LOCATION:Sala Lima 1
+DTSTART:20250903T160000Z
+DTEND:20250903T170000Z
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio - Inteligencia Artificial y su aplicación al sector Turismo
+END:VALARM
+END:VEVENT
+END:VCALENDAR

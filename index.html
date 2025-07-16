@@ -171,15 +171,12 @@
         .time .hour {
             color: #662483;
             font-family: 'FC_Regular';
-            /* font-weight: normal; */
             line-height: 150%;
             font-size: 15px;
         }
 
         .time .min {
-            /* font-weight: bolder; */
             font-family: 'FC_Regular';
-            /* font-weight: normal; */
             line-height: 150%;
             font-size: 15px;
         }
@@ -223,7 +220,6 @@
             text-decoration: none;
             color: white;
             font-size: 14px;
-            /* font-weight: bold; */
             border-radius: 15px;
             margin-right: 10px;
         }
@@ -290,7 +286,6 @@
             display: flex;
             width: max-content;
             margin: 0 auto;
-            /* animation: scroll-left 50s linear infinite; */
         }
 
         .carousel-group {
@@ -315,7 +310,6 @@
             display: flex;
             gap: 20px;
             padding-right: 20px;
-            /* animation: scrolling 20s linear infinite; */
         }
 
 
@@ -335,7 +329,6 @@
         .card-wrapper {
             position: relative;
             width: 230px;
-            /* width: 312px; */
         }
 
         .card {
@@ -364,8 +357,6 @@
         .overlay {
             position: absolute;
             inset: 0;
-            /* background-color: rgba(0, 0, 0, 0.3); */
-            /* background: linear-gradient(0deg, rgba(6, 0, 255, 0.06), rgba(6, 0, 255, 0.06)), linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 68%, rgba(0, 0, 0, 0.7) 77%); */
             background: linear-gradient(0deg, rgba(6, 0, 255, 0.06), rgba(6, 0, 255, 0.06)), linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 35%, rgba(0, 0, 0, 0.7) 75%);
             z-index: 1;
         }
@@ -393,10 +384,6 @@
             pointer-events: none;
         }
 
-        /* .carousel-wrapper:hover .group {
-            animation-play-state: paused;
-        } */
-
         #tooltip-container .info-adicional {
             position: absolute;
             background: white;
@@ -409,7 +396,6 @@
             pointer-events: auto;
             width: 230px;
             z-index: 999;
-            /* animation: tooltipSlideDown 0.3s ease-out; */
         }
 
         #tooltip-container .info-adicional::before {
@@ -421,10 +407,6 @@
             border-style: solid;
             border-color: transparent transparent white transparent;
         }
-
-        /* .carousel-wrapper:hover .carousel-track {
-            animation-play-state: paused;
-        } */
 
         #tooltip-container {
             font-family: 'FC_Light';
@@ -438,8 +420,6 @@
         .card {
             background-size: cover;
             background-position: center;
-            /* transition: transform 1s ease, background-size 0.6s ease; */
-            /* transition: background-size 3s ease-in-out; */
             transition: transform 0.5s ease-in-out;
             position: relative;
             height: 250px;
@@ -453,7 +433,6 @@
 
 
         .card:hover {
-            /* background-size: 110% !important; */
             transform: scale(1.10);
 
         }
@@ -498,11 +477,6 @@
             z-index: 10000;
         }
 
-
-
-        /* ponentes y panelistas */
-
-        /* Estructura del carrusel */
         #ponentesPanelistas .ponentes-carousel-wrapper {
             overflow: hidden;
             width: 100%;
@@ -518,7 +492,6 @@
             gap: 15px;
         }
 
-        /* Tarjetas */
         #ponentesPanelistas .ponente-card-wrapper {
             position: relative;
             overflow: hidden;
@@ -539,7 +512,6 @@
         #ponentesPanelistas .ponente-card {
             position: relative;
             width: 312px;
-            /* mínimo sugerido */
             height: 350px;
             background-size: cover !important;
             background-position: center !important;
@@ -547,11 +519,9 @@
             overflow: hidden;
         }
 
-        /* Descripción animada */
         #ponentesPanelistas .ponente-card-wrapper .ponente-descripcion {
             position: absolute;
             bottom: -100%;
-            /* oculto al inicio */
             left: 0;
             width: 100%;
             min-width: 312px;
@@ -569,11 +539,9 @@
             font-weight: normal;
             line-height: 150%;
             font-size: 15px;
-            /* text-align: justify; */
             border-radius: 12px;
         }
 
-        /* Al hacer hover, sube el texto */
         #ponentesPanelistas .ponente-card-wrapper:hover .ponente-descripcion {
             bottom: 0;
             opacity: 1;
@@ -584,6 +552,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W36ZTBJ" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <div class="page-loader">
         <div class="page-loader-spinner">
             <div class="page-loader-spinner-bounce1"></div>
@@ -607,10 +576,9 @@
                 <div class="wrapper-menu-right">
                     <ul>
                         <li><a href="#que-es" class="linkeo">Turismo In Summit</a></li>
-                        <li><a href="#programa" class="linkeo">Directorio de expositores</a></li>
-                        <li><a href="#bloques" class="linkeo">Conferencias y paneles</a></li>
-                        <li><a href="#colaboradores" class="linkeo">Ponentes</a></li>
-                        <!-- <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li> -->
+                        <li><a href="#directorio-expositores" class="linkeo">Directorio de expositores</a></li>
+                        <li><a href="#conferencia-paneles" class="linkeo">Conferencias y paneles</a></li>
+                        <li><a href="#ponentes" class="linkeo">Ponentes</a></li>
                         <li><a class="aInscribete"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
                                 target="_blank">Inscríbete aquí</a></li>
@@ -627,15 +595,15 @@
             <div class="wrapper-hero-menu">
                 <div class="wrapper-hero-menu-container">
                     <ul>
-                        <li><a href="#inicio" class="linkeo">Inicio</a></li>
+                        <!-- <li><a href="#inicio" class="linkeo">Inicio</a></li> -->
                         <li><a href="#que-es" class="linkeo">Turismo In Summit</a></li>
-                        <li><a href="#programa" class="linkeo">Feria Tech</a></li>
-                        <li><a href="#bloques" class="linkeo">Conferencia y paneles</a></li>
-                        <li><a href="#colaboradores" class="linkeo">Ponente</a></li>
-                        <li><a href="#colaboradores" class="linkeo">Colaboradores</a></li>
+                        <li><a href="#directorio-expositores" class="linkeo">Directorio de expositores</a></li>
+                        <li><a href="#conferencia-paneles" class="linkeo">Conferencias y paneles</a></li>
+                        <li><a href="#ponentes" class="linkeo">Ponentes</a></li>
                         <li><a class="aInscribete"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
-                                target="_blank">Inscríbete aquí</a></li>
+                                target="_blank">Inscríbete aquí</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -752,7 +720,7 @@
             <div class="wrapper-parallax-bg parallax-1" data-type="wpbg" data-speed="3">
             </div>
         </div>
-        <div class="wrapper-third" id="feria">
+        <div class="wrapper-third" id="directorio-expositores">
             <div class="wrapper-third-section">
                 <h1>Directorio de expositores</h1>
                 <div class="wrapper-first-item-right-section directorioExpositores">
@@ -804,7 +772,7 @@
         </div>
 
 
-        <div class="wrapper-third" id="conferencias">
+        <div class="wrapper-third" id="conferencia-paneles">
             <div class="wrapper-third-section">
                 <h1>Conferencias y paneles</h1>
                 <div class="wrapper-first-item-right-section">
@@ -828,8 +796,9 @@
                             <h2>Datos turísticos mediante Big Data y cómo aprovecharlo</h2>
                             <p>a cargo de Emigdio Campos Diaz</p>
                             <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="complemento/calendario/conferencias/DatosTuristicosmedianteBigData.ics"
+                                    class="button outlook text-center" download="DatosTuristicosmedianteBigData.ics">Añadir a mi <br>
+                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Datos+tur%C3%ADsticos+mediante+Big+Data+y+c%C3%B3mo+aprovecharlo&dates=20250903T150000Z/20250903T160000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -846,8 +815,9 @@
                             <h2>Inteligencia Artificial y su aplicación al sector Turismo</h2>
                             <p>a cargo de Edison Medina La Plata</p>
                             <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="complemento/calendario/conferencias/InteligenciaArtificialTurismo.ics"
+                                    class="button outlook text-center" download="InteligenciaArtificialTurismo.ics">Añadir a mi <br>
+                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Inteligencia+Artificial+y+su+aplicaci%C3%B3n+al+sector+Turismo&dates=20250903T160000Z/20250903T170000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -864,43 +834,42 @@
                             <h2>El impacto de la digitalización en la vida y el consumo en el Perú</h2>
                             <p>a cargo de Javier Alvarez Pecol</p>
                             <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="complemento/calendario/conferencias/ImpactoDigitalizacionPeru.ics"
+                                    class="button outlook text-center" download="ImpactoDigitalizacionPeru.ics">Añadir a mi <br>
+                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=El+impacto+de+la+digitalizaci%C3%B3n+en+la+vida+y+el+consumo+en+el+Per%C3%BA&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- <div class="header">
-                        <h2>Sala 2</p>
-                    </div> -->
-
-                    <!-- <div class="session">
-                        <div class="time">
-                            <h3 class="text-center hour">10:30 a. m. - 11:00 a. m.</h3>
-                            <h3 class="text-center min">(30 min.)</h3>
-                        </div>
-                        <div class="details">
-                            <h2>Inteligencia Artificial y su aplicación al sector Turismo</h2>
-                            <p>a cargo de Edison Medina La Plata</p>
-                            <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/r/eventedit?text=Atraer+y+fidelizar+con+Big+Data&dates=20250330T103000Z/20250330T110000Z&details=Reunión+para+discutir+los+proyectos&location=Sala+1"
-                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
-                                    Calendar</a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
 
                 <div class="wrapper-first-item-right-section">
                     <div class="header">
                         <h1>Paneles</h1>
                         <h2>Sala Lima 1</p>
+                    </div>
+
+                    <div class="session">
+                        <div class="time">
+                            <h3 class="text-center hour">12:00 p. m. - 01:00 p. m.</h3>
+                        </div>
+                        <div class="details">
+                            <h2> Servicios gubernamentales para impulsar la digitalización</h2>
+                            <p>A cargo de:</p>
+                            <p>- Jenniffer Duran - Produce (Perú)</p>
+                            <p>- Cenfotur</p>
+                            <p>- Krystel Carranza - Proinnovate (Perú)</p>
+                            <div class="buttons">
+                                <a href="complemento/calendario/paneles/ServiciosGubernamentalesDigitalizacion.ics"
+                                    class="button outlook text-center" download="ServiciosGubernamentalesDigitalizacion.ics">Añadir a mi <br>
+                                    Outlook</a>
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
+                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
+                                    Calendar</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="session">
@@ -916,8 +885,9 @@
                             <p>- José Garin - TurBox Go (Uruguay)</p>
 
                             <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="complemento/calendario/paneles/ImpulsarVentasDigitales.ics"
+                                    class="button outlook text-center" download="ImpulsarVentasDigitales.ics">Añadir a mi <br>
+                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%C2%BFC%C3%B3mo+impulsar+las+ventas+digitales%3F&dates=20250903T200000Z/20250903T210000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -936,8 +906,9 @@
                             <p>- Rodrigo Cabrera - Tourcert (Alemania)</p>
                             <p>- Katherine Castañeda - Profonampe (Perú)</p>
                             <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
+                                <a href="complemento/calendario/paneles/SostenibilidadTuristica.ics"
+                                    class="button outlook text-center" download="SostenibilidadTuristica.ics">Añadir a mi <br>
+                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -945,25 +916,7 @@
                         </div>
                     </div>
 
-                    <div class="session">
-                        <div class="time">
-                            <h3 class="text-center hour">XXX:00 p. m. - XX:00 p. m.</h3>
-                        </div>
-                        <div class="details">
-                            <h2> Servicios gubernamentales para impulsar la digitalización</h2>
-                            <p>A cargo de:</p>
-                            <p>- Jenniffer Duran - Produce (Perú)</p>
-                            <p>- XXXXX Nieves - Cenfotur (Perú)</p>
-                            <p>- Krystel Carranza - Proinnovate (Perú)</p>
-                            <div class="buttons">
-                                <a href="reunionEjemplo.ics" class="button outlook text-center"
-                                    download="evento_outlook.ics">Añadir a mi <br> Outlook</a>
-                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
-                                    class="button google text-center" target="_blank">Añadir a mi <br> Google
-                                    Calendar</a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -971,7 +924,7 @@
             <div class="wrapper-parallax-bg parallax-2" data-type="wpbg" data-speed="3">
             </div>
         </div>
-        <div class="wrapper-third" id="bloques">
+        <div class="wrapper-third" id="ponentes">
             <div class="wrapper-third-section">
                 <h1>PONENTES Y PANELISTAS</h1>
                 <div class="wrapper-first-item-right-section">
@@ -980,8 +933,6 @@
                         acompañarán en esta edición de Turismo In Summit
                     </p>
                 </div>
-
-                <!-- <div class="wrapper-third-list"> -->
                 <div class="wrapper-third-list">
                     <div id="ponentesPanelistas">
                         <div class="ponentes-carousel-wrapper">
@@ -999,7 +950,7 @@
                                                 estratégico de datos.
                                             </p>
 
-                                            
+
                                         </div>
                                         <p class="ponente-nombre"> Emigdio Campos Diaz</p>
                                     </div>
@@ -1015,7 +966,7 @@
                                                 investigación de mercados y comportamiento del consumidor peruano.
                                             </p>
 
-                                          
+
                                         </div>
                                         <p class="ponente-nombre">Javier Alvarez Pecol</p>
                                     </div>
@@ -1024,7 +975,8 @@
                                         <div class="ponente-card"
                                             style="background: url(complemento/img/ponentes/EdisonMedina.jpg);">
                                             <p class="ponente-descripcion">
-                                                Gerente de EML information, empresa de soluciones basadas en el uso estratégico de
+                                                Gerente de EML information, empresa de soluciones basadas en el uso
+                                                estratégico de
                                                 datos. Es MBA, docente y director de cursos
                                                 y programas en gestión de datos en la UPC Posgrado, con más de 15 años
                                                 de experiencia nacional e internacional.
@@ -1187,9 +1139,8 @@
             <button class="close-btn" onclick="closeMiniPopup()">×</button>
             <div class="mini-content">
                 <div class="info-adicional">
-                    <p class="dato">Expositor: </p>
-                    <p class="pExpositor"></p>
-                    <br>
+                    <span class="dato">Expositor: </span>
+                    <span class="pExpositor"></span>
                     <p class="aDescripcion"></p>
                     <p class="dato">Contacto: </p>
                     <p class="pContacto"> Mariella Sperduti</p>
@@ -1314,7 +1265,7 @@
             paginaWeb.href = empresa.PaginaWeb || "#";
             paginaWeb.textContent = empresa.PaginaWeb ? "Página web" : "Sin página";
 
-            document.querySelector(".pContacto").textContent = empresa.Expositor || "";
+            document.querySelector(".pContacto").textContent = empresa.Contacto || "";
             document.querySelector(".pCargo").textContent = empresa.Cargo || "";
             document.querySelector(".pCorreo").textContent = empresa.Correo || "";
             document.querySelector(".aDescripcion").textContent = empresa.Descripcion || "";

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TurismoIn Summit//ES
+BEGIN:VEVENT
+SUMMARY:Datos turísticos mediante Big Data y cómo aprovecharlo
+DESCRIPTION:TurismoIn Summit
+LOCATION:Sala Lima 1
+DTSTART:20250903T150000Z
+DTEND:20250903T160000Z
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio - Datos turísticos mediante Big Data y cómo aprovecharlo
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TurismoIn Summit//ES
+BEGIN:VEVENT
+SUMMARY:El impacto de la digitalización en la vida y el consumo en el Perú
+DESCRIPTION:TurismoIn Summit
+LOCATION:Sala Lima 1
+DTSTART:20250903T170000Z
+DTEND:20250903T180000Z
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio - El impacto de la digitalización en la vida y el consumo en el Perú
+END:VALARM
+END:VEVENT
+END:VCALENDAR
