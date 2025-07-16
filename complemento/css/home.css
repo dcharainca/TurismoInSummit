@@ -373,7 +373,9 @@
     display: inline-block;
     vertical-align: middle;
     width: 300px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    margin: 0 20px;
+    text-align: left;
 }
 
 .wrapper-second-item-left img {
@@ -508,7 +510,7 @@
 .wrapper-first-section h2 {
     font-family: 'FC_Regular';
     font-size: 20px;    
-    text-align: center;
+    text-align: left;
     display: block;
     color: #662483;
     /* margin-bottom: 40px; */
