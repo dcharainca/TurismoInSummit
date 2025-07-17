@@ -956,8 +956,8 @@ b{
 
     .wrapper-first-section {
         width: 80%;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .wrapper-second-section {
@@ -998,7 +998,7 @@ b{
     }
 
     .wrapper-first-item-right-section {
-        padding: 30px 25px;
+        padding: 5px 25px;
     }
 
     .wrapper-first-item-right-section ul {
@@ -1022,7 +1022,7 @@ b{
     .wrapper-second-item-left {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
     }
 
     .wrapper-second-item-right {

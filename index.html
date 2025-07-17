@@ -482,10 +482,33 @@
             width: 100%;
         }
 
-        #ponentesPanelistas .ponentes-carousel-track {
+        /* #ponentesPanelistas .ponentes-carousel-track {
             display: flex;
             transition: transform 0.3s ease-in-out;
+        } */
+        #ponentesPanelistas .ponentes-carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            cursor: grab;
+            will-change: transform;
         }
+
+        #ponentesPanelistas .ponentes-carousel-track.dragging {
+            transition: none;
+        }
+
+        /* #ponentesPanelistas .ponentes-carousel-wrapper {
+            overflow-x: auto;
+         
+            scroll-behavior: smooth;
+        }
+
+        #ponentesPanelistas .ponentes-carousel-track {
+            display: flex;
+            cursor: grab;
+            user-select: none;
+            width: max-content;            
+        } */
 
         #ponentesPanelistas .ponentes-carousel-group {
             display: flex;
@@ -545,6 +568,39 @@
         #ponentesPanelistas .ponente-card-wrapper:hover .ponente-descripcion {
             bottom: 0;
             opacity: 1;
+        }
+
+        #ponentesPanelistas .ponentes-carousel-track {
+            cursor: grab;
+            user-select: none;
+        }
+
+        #ponentesPanelistas .ponentes-carousel-track.dragging .ponente-card-wrapper,
+        #ponentesPanelistas .ponentes-carousel-track.dragging .ponente-card,
+        #ponentesPanelistas .ponentes-carousel-track.dragging .ponente-descripcion {
+            pointer-events: none;
+        }
+
+
+        .ponentes-carousel-track,
+        .carousel-track {
+            transition: transform 0.3s ease;
+            cursor: grab;
+            will-change: transform;
+        }
+
+        .ponentes-carousel-track.dragging,
+        .carousel-track.dragging {
+            transition: none;
+        }
+
+        .ponentes-carousel-track.dragging .ponente-card-wrapper,
+        .ponentes-carousel-track.dragging .ponente-card,
+        .ponentes-carousel-track.dragging .ponente-descripcion,
+        .carousel-track.dragging .card-wrapper,
+        .carousel-track.dragging .card,
+        .carousel-track.dragging .overlay {
+            pointer-events: none;
         }
     </style>
 
@@ -732,7 +788,7 @@
 
 
                 <div class="wrapper-first-item-right-section">
-                    <div class="carousel-wrapper">
+                    <div class="carousel-wrapper" id="directorioExpositores">
                         <div class="carousel-track">
                             <div class="carousel-group">
                                 <div class="card-wrapper"
@@ -797,7 +853,8 @@
                             <p>a cargo de Emigdio Campos Diaz</p>
                             <div class="buttons">
                                 <a href="complemento/calendario/conferencias/DatosTuristicosmedianteBigData.ics"
-                                    class="button outlook text-center" download="DatosTuristicosmedianteBigData.ics">Añadir a mi <br>
+                                    class="button outlook text-center"
+                                    download="DatosTuristicosmedianteBigData.ics">Añadir a mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Datos+tur%C3%ADsticos+mediante+Big+Data+y+c%C3%B3mo+aprovecharlo&dates=20250903T150000Z/20250903T160000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -816,7 +873,8 @@
                             <p>a cargo de Edison Medina La Plata</p>
                             <div class="buttons">
                                 <a href="complemento/calendario/conferencias/InteligenciaArtificialTurismo.ics"
-                                    class="button outlook text-center" download="InteligenciaArtificialTurismo.ics">Añadir a mi <br>
+                                    class="button outlook text-center"
+                                    download="InteligenciaArtificialTurismo.ics">Añadir a mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Inteligencia+Artificial+y+su+aplicaci%C3%B3n+al+sector+Turismo&dates=20250903T160000Z/20250903T170000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -835,7 +893,8 @@
                             <p>a cargo de Javier Alvarez Pecol</p>
                             <div class="buttons">
                                 <a href="complemento/calendario/conferencias/ImpactoDigitalizacionPeru.ics"
-                                    class="button outlook text-center" download="ImpactoDigitalizacionPeru.ics">Añadir a mi <br>
+                                    class="button outlook text-center" download="ImpactoDigitalizacionPeru.ics">Añadir a
+                                    mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=El+impacto+de+la+digitalizaci%C3%B3n+en+la+vida+y+el+consumo+en+el+Per%C3%BA&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -863,7 +922,8 @@
                             <p>- Krystel Carranza - Proinnovate (Perú)</p>
                             <div class="buttons">
                                 <a href="complemento/calendario/paneles/ServiciosGubernamentalesDigitalizacion.ics"
-                                    class="button outlook text-center" download="ServiciosGubernamentalesDigitalizacion.ics">Añadir a mi <br>
+                                    class="button outlook text-center"
+                                    download="ServiciosGubernamentalesDigitalizacion.ics">Añadir a mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -886,7 +946,8 @@
 
                             <div class="buttons">
                                 <a href="complemento/calendario/paneles/ImpulsarVentasDigitales.ics"
-                                    class="button outlook text-center" download="ImpulsarVentasDigitales.ics">Añadir a mi <br>
+                                    class="button outlook text-center" download="ImpulsarVentasDigitales.ics">Añadir a
+                                    mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%C2%BFC%C3%B3mo+impulsar+las+ventas+digitales%3F&dates=20250903T200000Z/20250903T210000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -907,7 +968,8 @@
                             <p>- Katherine Castañeda - Profonampe (Perú)</p>
                             <div class="buttons">
                                 <a href="complemento/calendario/paneles/SostenibilidadTuristica.ics"
-                                    class="button outlook text-center" download="SostenibilidadTuristica.ics">Añadir a mi <br>
+                                    class="button outlook text-center" download="SostenibilidadTuristica.ics">Añadir a
+                                    mi <br>
                                     Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
@@ -1171,6 +1233,151 @@
         const contenidosImagenes = document.getElementsByClassName('image-grid');
         const miniPopup = document.getElementById('miniPopup');
         var dataJson;
+
+        (function () {
+            const carousels = [
+                {
+                    selector: '#ponentesPanelistas .ponentes-carousel-track',
+                    cardSelector: '.ponente-card-wrapper',
+                    gap: 15
+                },
+                {
+                    selector: '#directorioExpositores .carousel-track',
+                    cardSelector: '.card-wrapper',
+                    gap: 20
+                }
+            ];
+
+            carousels.forEach(({ selector, cardSelector, gap }) => {
+                const track = document.querySelector(selector);
+                const cards = document.querySelectorAll(`${selector} ${cardSelector}`);
+                if (!track || cards.length === 0) return;
+
+                let isDragging = false;
+                let hasMoved = false; // 👈 Nuevo: para detectar si realmente se movió
+                let startX = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+                let cardWidth = 0;
+                let maxTranslate = 0;
+                let isCarouselActive = false;
+
+                function setLimits() {
+                    cardWidth = cards[0].offsetWidth + gap;
+                    const totalWidth = cardWidth * cards.length;
+                    const visibleWidth = track.parentElement.offsetWidth;
+                    maxTranslate = -(totalWidth - visibleWidth);
+
+                    isCarouselActive = totalWidth > visibleWidth;
+                    if (!isCarouselActive) {
+                        currentTranslate = 0;
+                        prevTranslate = 0;
+                        track.style.transform = 'translateX(0)';
+                        track.style.cursor = 'default';
+                        track.classList.remove('dragging');
+                    } else {
+                        track.style.cursor = 'grab';
+                    }
+                }
+
+                function setTrackPosition() {
+                    track.style.transform = `translateX(${currentTranslate}px)`;
+                }
+
+                function applyBounds() {
+                    if (currentTranslate > 0) currentTranslate = 0;
+                    if (currentTranslate < maxTranslate) currentTranslate = maxTranslate;
+                }
+
+                function snapToClosest() {
+                    let snapIndex = Math.round(Math.abs(currentTranslate) / cardWidth);
+                    currentTranslate = -(snapIndex * cardWidth);
+                    applyBounds();
+                    setTrackPosition();
+                    prevTranslate = currentTranslate;
+                }
+
+                // ✅ Mouse
+                track.addEventListener('mousedown', (e) => {
+                    if (!isCarouselActive) return;
+                    isDragging = true;
+                    hasMoved = false; // 👈 Reiniciamos
+                    startX = e.pageX;
+                    track.style.cursor = 'grabbing';
+                    track.classList.add('dragging');
+                });
+
+                track.addEventListener('mousemove', (e) => {
+                    if (!isDragging || !isCarouselActive) return;
+                    const diff = e.pageX - startX;
+                    if (Math.abs(diff) > 5) hasMoved = true; // 👈 Se considera arrastre si se mueve más de 5px
+                    currentTranslate = prevTranslate + diff;
+                    applyBounds();
+                    setTrackPosition();
+                });
+
+                track.addEventListener('mouseup', (e) => {
+                    if (!isCarouselActive) return;
+                    isDragging = false;
+                    track.style.cursor = 'grab';
+                    track.classList.remove('dragging');
+                    snapToClosest();
+
+                    // ✅ Si no se arrastró, forzamos el clic manualmente
+                    if (!hasMoved) {
+                        const target = e.target.closest(cardSelector);
+                        if (target) target.click();
+                    }
+                });
+
+                track.addEventListener('mouseleave', () => {
+                    if (!isDragging || !isCarouselActive) return;
+                    isDragging = false;
+                    track.style.cursor = 'grab';
+                    track.classList.remove('dragging');
+                    snapToClosest();
+                });
+
+                // ✅ Touch
+                track.addEventListener('touchstart', (e) => {
+                    if (!isCarouselActive) return;
+                    isDragging = true;
+                    hasMoved = false;
+                    startX = e.touches[0].pageX;
+                    track.classList.add('dragging');
+                });
+
+                track.addEventListener('touchmove', (e) => {
+                    if (!isDragging || !isCarouselActive) return;
+                    const diff = e.touches[0].pageX - startX;
+                    if (Math.abs(diff) > 5) hasMoved = true;
+                    currentTranslate = prevTranslate + diff;
+                    applyBounds();
+                    setTrackPosition();
+                });
+
+                track.addEventListener('touchend', (e) => {
+                    if (!isCarouselActive) return;
+                    isDragging = false;
+                    track.classList.remove('dragging');
+                    snapToClosest();
+
+                    if (!hasMoved) {
+                        const target = e.target.closest(cardSelector);
+                        if (target) target.click();
+                    }
+                });
+
+                setLimits();
+                window.addEventListener('resize', setLimits);
+            });
+        })();
+
+
+
+
+
+
 
         async function cargarSolucionesTecnologicas() {
             try {
