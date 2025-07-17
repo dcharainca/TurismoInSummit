@@ -444,7 +444,7 @@
     z-index: 1;
 }
 
-.wrapper-parallax-bg {
+/* .wrapper-parallax-bg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -453,6 +453,16 @@
     height: 100%;
     position: absolute;
     z-index: 500;
+} */
+.wrapper-parallax-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    z-index: 1;
+    will-change: background-position;
 }
 
 .parallax-1 {

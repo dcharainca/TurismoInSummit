@@ -1261,7 +1261,7 @@
                 if (!track || cards.length === 0) return;
 
                 let isDragging = false;
-                let hasMoved = false; // 👈 Nuevo: para detectar si realmente se movió
+                let hasMoved = false; 
                 let startX = 0;
                 let currentTranslate = 0;
                 let prevTranslate = 0;
@@ -1308,7 +1308,7 @@
                 track.addEventListener('mousedown', (e) => {
                     if (!isCarouselActive) return;
                     isDragging = true;
-                    hasMoved = false; // 👈 Reiniciamos
+                    hasMoved = false; 
                     startX = e.pageX;
                     track.style.cursor = 'grabbing';
                     track.classList.add('dragging');
@@ -1317,7 +1317,7 @@
                 track.addEventListener('mousemove', (e) => {
                     if (!isDragging || !isCarouselActive) return;
                     const diff = e.pageX - startX;
-                    if (Math.abs(diff) > 5) hasMoved = true; // 👈 Se considera arrastre si se mueve más de 5px
+                    if (Math.abs(diff) > 5) hasMoved = true;
                     currentTranslate = prevTranslate + diff;
                     applyBounds();
                     setTrackPosition();
@@ -1329,8 +1329,7 @@
                     track.style.cursor = 'grab';
                     track.classList.remove('dragging');
                     snapToClosest();
-
-                    // ✅ Si no se arrastró, forzamos el clic manualmente
+                    
                     if (!hasMoved) {
                         const target = e.target.closest(cardSelector);
                         if (target) target.click();
@@ -1344,8 +1343,7 @@
                     track.classList.remove('dragging');
                     snapToClosest();
                 });
-
-                // ✅ Touch
+                
                 track.addEventListener('touchstart', (e) => {
                     if (!isCarouselActive) return;
                     isDragging = true;
@@ -1513,7 +1511,24 @@
         });
 
        
-        
+        (function () {
+    const parallaxSections = document.querySelectorAll('.wrapper-parallax-bg');
+
+    function updateParallax() {
+        const scrollY = window.scrollY;
+        parallaxSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const offsetTop = rect.top + window.scrollY;
+            const speed = 0.4;            
+            const yPos = (scrollY - offsetTop) * speed;            
+            section.style.backgroundPosition = `center ${yPos}px`;
+        });
+    }
+
+    window.addEventListener('scroll', updateParallax);
+    window.addEventListener('resize', updateParallax);
+    updateParallax();
+})();
 
 
 
