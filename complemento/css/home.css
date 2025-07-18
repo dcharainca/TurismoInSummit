@@ -517,14 +517,7 @@
     margin-bottom: 40px;
 }
 
-.wrapper-first-section h2 {
-    font-family: 'FC_Regular';
-    font-size: 20px;    
-    text-align: left;
-    display: block;
-    color: #662483;
-    /* margin-bottom: 40px; */
-}
+
 
 .wrapper-third-section h1 {
     font-family: 'FC_Regular';
@@ -783,8 +776,20 @@ b{
     width: 100%;
 }
 
+.wrapper-first-section h2 {
+    font-family: 'FC_Regular';
+    font-size: 20px;    
+    text-align: left;
+    display: block;
+    color: #662483;    
+}
+
 @media only screen and (max-width: 480px) {
 
+    .wrapper-first-section h2 {        
+        text-align: center;        
+    }
+    
 
     .wrapper-banner-section-item-bg {   
         /* background-image: url(/complemento/img/Banner/bannerSummit_mobile.jpg); */
@@ -1163,7 +1168,7 @@ b{
         font-weight: normal !important;
     }
 }
-@media only screen and (min-width: 481px) and (max-width: 599px) {
+@media only screen and (min-width: 481px) and (max-width: 599px) {    
     .wrapper-banner-section-item-block {
         position: absolute;
         z-index: 3;
