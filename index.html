@@ -368,6 +368,33 @@
             z-index: 1;
         }
 
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            display: none;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-btn.left {
+            left: 5px;
+        }
+
+        .carousel-btn.right {
+            right: 5px;
+        }
+
         .info-adicional {
             font-family: 'FC_Light';
             font-weight: normal;
@@ -520,6 +547,7 @@
         #ponentesPanelistas .ponentes-carousel-group {
             display: flex;
             gap: 15px;
+            margin: 0 auto;
         }
 
         #ponentesPanelistas .ponente-card-wrapper {
@@ -796,12 +824,13 @@
 
                 <div class="wrapper-first-item-right-section">
                     <div class="carousel-wrapper" id="directorioExpositores">
+                        <button class="carousel-btn left" id="btnPrev">&#10094;</button>
                         <div class="carousel-track">
                             <div class="carousel-group">
                                 <div class="card-wrapper"
                                     onclick="abrirPopup('Empresas de soluciones digitales','divSolucionesTecnologicas')">
                                     <div class="card"
-                                        style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
+                                    style="background: url(complemento/img/Carrousel/SolucionesTecnologicas.jpg);">
                                         <div class="overlay"></div>
                                         <h5>Empresas de soluciones digitales</h5>
                                     </div>
@@ -817,14 +846,17 @@
                                 <div class="card-wrapper"
                                     onclick="abrirPopup('Certificadoras de sostenibilidad','divImagenCertificaciones')">
                                     <div class="card"
-                                        style="background: url(complemento/img/Carrousel/SolucionesTecnologicas.jpg);">
+                                        
+                                        style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
                                         <div class="overlay"></div>
                                         <h5>Certificadoras de sostenibilidad</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="carousel-btn right" id="btnNext">&#10095;</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -919,7 +951,7 @@
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">12:00 p. m. - 01:00 p. m.</h3>
+                            <h3 class="text-center hour">03:00 p. m. - 04:00 p. m.</h3>
                         </div>
                         <div class="details">
                             <h2> Servicios gubernamentales para impulsar la digitalización</h2>
@@ -941,7 +973,7 @@
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">03:00 p. m. - 04:00 p. m.</h3>
+                            <h3 class="text-center hour">04:00 p. m. - 05:00 p. m.</h3>
                         </div>
                         <div class="details">
                             <h2>¿Cómo impulsar las ventas digitales?</h2>
@@ -965,7 +997,7 @@
 
                     <div class="session">
                         <div class="time">
-                            <h3 class="text-center hour">04:00 p. m. - 05:00 p. m.</h3>
+                            <h3 class="text-center hour">05:00 p. m. - 06:00 p. m.</h3>
                         </div>
                         <div class="details">
                             <h2>Sostenibilidad y la competitividad turística</h2>
@@ -1005,6 +1037,7 @@
                 <div class="wrapper-third-list">
                     <div id="ponentesPanelistas">
                         <div class="ponentes-carousel-wrapper">
+                            <button class="carousel-btn left" id="btnPrev">&#10094;</button>
                             <div class="ponentes-carousel-track">
                                 <div class="ponentes-carousel-group">
 
@@ -1056,6 +1089,7 @@
 
                                 </div>
                             </div>
+                            <button class="carousel-btn right" id="btnNext">&#10095;</button>
                         </div>
                     </div>
 
@@ -1255,13 +1289,15 @@
                 }
             ];
 
+
+
             carousels.forEach(({ selector, cardSelector, gap }) => {
                 const track = document.querySelector(selector);
                 const cards = document.querySelectorAll(`${selector} ${cardSelector}`);
                 if (!track || cards.length === 0) return;
 
                 let isDragging = false;
-                let hasMoved = false; 
+                let hasMoved = false;
                 let startX = 0;
                 let currentTranslate = 0;
                 let prevTranslate = 0;
@@ -1287,6 +1323,46 @@
                     }
                 }
 
+                const btnPrev = document.querySelector(`${selector}`).parentElement.querySelector('.left');
+                const btnNext = document.querySelector(`${selector}`).parentElement.querySelector('.right');
+
+                function updateButtonsVisibility() {
+                    if (isCarouselActive) {
+                        btnPrev.style.display = "block";
+                        btnNext.style.display = "block";
+                    } else {
+                        btnPrev.style.display = "none";
+                        btnNext.style.display = "none";
+                    }
+                }
+
+                btnPrev.addEventListener("click", () => {
+                    if (!isCarouselActive) return;
+                    currentTranslate += cardWidth;
+                    applyBounds();
+                    setTrackPosition();
+                    snapToClosest();
+                    prevTranslate = currentTranslate;
+                });
+
+                btnNext.addEventListener("click", () => {
+                    if (!isCarouselActive) return;
+                    currentTranslate -= cardWidth;
+                    applyBounds();
+                    setTrackPosition();
+                    snapToClosest();
+                    prevTranslate = currentTranslate;
+                });
+
+
+                function setLimitsWithButtons() {
+                    setLimits();
+                    updateButtonsVisibility();
+                }
+
+                window.addEventListener("resize", setLimitsWithButtons);
+                setLimitsWithButtons();
+
                 function setTrackPosition() {
                     track.style.transform = `translateX(${currentTranslate}px)`;
                 }
@@ -1308,7 +1384,7 @@
                 track.addEventListener('mousedown', (e) => {
                     if (!isCarouselActive) return;
                     isDragging = true;
-                    hasMoved = false; 
+                    hasMoved = false;
                     startX = e.pageX;
                     track.style.cursor = 'grabbing';
                     track.classList.add('dragging');
@@ -1329,7 +1405,7 @@
                     track.style.cursor = 'grab';
                     track.classList.remove('dragging');
                     snapToClosest();
-                    
+
                     if (!hasMoved) {
                         const target = e.target.closest(cardSelector);
                         if (target) target.click();
@@ -1343,7 +1419,7 @@
                     track.classList.remove('dragging');
                     snapToClosest();
                 });
-                
+
                 track.addEventListener('touchstart', (e) => {
                     if (!isCarouselActive) return;
                     isDragging = true;
@@ -1510,25 +1586,25 @@
             });
         });
 
-       
+
         (function () {
-    const parallaxSections = document.querySelectorAll('.wrapper-parallax-bg');
+            const parallaxSections = document.querySelectorAll('.wrapper-parallax-bg');
 
-    function updateParallax() {
-        const scrollY = window.scrollY;
-        parallaxSections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            const offsetTop = rect.top + window.scrollY;
-            const speed = 0.4;            
-            const yPos = (scrollY - offsetTop) * speed;            
-            section.style.backgroundPosition = `center ${yPos}px`;
-        });
-    }
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                parallaxSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const offsetTop = rect.top + window.scrollY;
+                    const speed = 0.4;
+                    const yPos = (scrollY - offsetTop) * speed;
+                    section.style.backgroundPosition = `center ${yPos}px`;
+                });
+            }
 
-    window.addEventListener('scroll', updateParallax);
-    window.addEventListener('resize', updateParallax);
-    updateParallax();
-})();
+            window.addEventListener('scroll', updateParallax);
+            window.addEventListener('resize', updateParallax);
+            updateParallax();
+        })();
 
 
 
