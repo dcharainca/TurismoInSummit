@@ -605,6 +605,11 @@
             opacity: 1;
         }
 
+        #ponentesPanelistas .ponente-card-wrapper.show-desc .ponente-descripcion {
+            bottom: 0;
+            opacity: 1;
+        }
+
         #ponentesPanelistas .ponentes-carousel-track {
             cursor: grab;
             user-select: none;
@@ -1592,14 +1597,14 @@
             const cards = document.querySelectorAll("#ponentesPanelistas .ponente-card-wrapper");
 
             cards.forEach(card => {
-                card.addEventListener("click", function () {                    
+                card.addEventListener("click", function () {
                     cards.forEach(c => c.classList.remove("show-desc"));
-            
+
                     card.classList.add("show-desc");
                 });
             });
 
-            
+
             document.addEventListener("click", function (e) {
                 if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
                     cards.forEach(c => c.classList.remove("show-desc"));
