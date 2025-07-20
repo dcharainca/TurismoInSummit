@@ -1596,30 +1596,47 @@
             const cards = document.querySelectorAll("#ponentesPanelistas .ponente-card-wrapper");
             const track = document.querySelector("#ponentesPanelistas .ponentes-carousel-track");
 
+            function toggleCard(card) {
+                if (track.classList.contains("dragging")) return;
+
+                
+                cards.forEach(c => {
+                    if (c !== card) c.classList.remove("show-desc");
+                });
+
+                
+                card.classList.toggle("show-desc");
+            }
+
             cards.forEach(card => {
-
+                
                 card.addEventListener("click", function (e) {
+                    if ("ontouchstart" in window) return;
+                    toggleCard(card);
+                    e.stopPropagation();
+                });
 
-                    if (track.classList.contains("dragging")) return;
-
-
-                    cards.forEach(c => {
-                        if (c !== card) c.classList.remove("show-desc");
-                    });
-
-
-                    card.classList.toggle("show-desc");
+                
+                card.addEventListener("touchstart", function (e) {
+                    toggleCard(card);
                     e.stopPropagation();
                 });
             });
 
-
+            
             document.addEventListener("click", function (e) {
                 if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
                     cards.forEach(c => c.classList.remove("show-desc"));
                 }
             });
+
+            document.addEventListener("touchstart", function (e) {
+                if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
+                    cards.forEach(c => c.classList.remove("show-desc"));
+                }
+            });
         });
+
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 if (miniPopup.style.display === "flex") {
