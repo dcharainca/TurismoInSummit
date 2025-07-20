@@ -1384,7 +1384,6 @@
                     prevTranslate = currentTranslate;
                 }
 
-                // ✅ Mouse
                 track.addEventListener('mousedown', (e) => {
                     if (!isCarouselActive) return;
                     isDragging = true;
@@ -1598,11 +1597,17 @@
             const track = document.querySelector("#ponentesPanelistas .ponentes-carousel-track");
 
             cards.forEach(card => {
+
                 card.addEventListener("click", function (e) {
+
                     if (track.classList.contains("dragging")) return;
+
+
                     cards.forEach(c => {
                         if (c !== card) c.classList.remove("show-desc");
                     });
+
+
                     card.classList.toggle("show-desc");
                     e.stopPropagation();
                 });
