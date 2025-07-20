@@ -1595,12 +1595,16 @@
         document.addEventListener("DOMContentLoaded", cargarSolucionesTecnologicas);
         document.addEventListener("DOMContentLoaded", function () {
             const cards = document.querySelectorAll("#ponentesPanelistas .ponente-card-wrapper");
+            const track = document.querySelector("#ponentesPanelistas .ponentes-carousel-track");
 
             cards.forEach(card => {
-                card.addEventListener("click", function () {
-                    cards.forEach(c => c.classList.remove("show-desc"));
-
-                    card.classList.add("show-desc");
+                card.addEventListener("click", function (e) {
+                    if (track.classList.contains("dragging")) return;
+                    cards.forEach(c => {
+                        if (c !== card) c.classList.remove("show-desc");
+                    });
+                    card.classList.toggle("show-desc");
+                    e.stopPropagation();
                 });
             });
 
