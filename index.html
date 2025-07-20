@@ -637,7 +637,6 @@
         .carousel-track.dragging .overlay {
             pointer-events: none;
         }
-
     </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -1573,7 +1572,13 @@
 
             document.querySelector(".pContacto").textContent = empresa.Contacto || "";
             document.querySelector(".pCargo").textContent = empresa.Cargo || "";
-            document.querySelector(".pCorreo").textContent = empresa.Correo || "";
+            // document.querySelector(".pCorreo").textContent = empresa.Correo || "";
+            const correoEl = document.querySelector(".pCorreo");
+            correoEl.textContent = empresa.Correo || "Sin correo";
+            correoEl.style.cursor = empresa.Correo ? "pointer" : "default";
+            correoEl.onclick = empresa.Correo
+                ? () => window.location.href = `mailto:${empresa.Correo}`
+                : null;
             document.querySelector(".aDescripcion").textContent = empresa.Descripcion || "";
 
 
@@ -1583,6 +1588,24 @@
         }
 
         document.addEventListener("DOMContentLoaded", cargarSolucionesTecnologicas);
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll("#ponentesPanelistas .ponente-card-wrapper");
+
+            cards.forEach(card => {
+                card.addEventListener("click", function () {                    
+                    cards.forEach(c => c.classList.remove("show-desc"));
+            
+                    card.classList.add("show-desc");
+                });
+            });
+
+            
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
+                    cards.forEach(c => c.classList.remove("show-desc"));
+                }
+            });
+        });
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 if (miniPopup.style.display === "flex") {
