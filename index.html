@@ -637,6 +637,7 @@
         .carousel-track.dragging .overlay {
             pointer-events: none;
         }
+
     </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -830,7 +831,7 @@
                                 <div class="card-wrapper"
                                     onclick="abrirPopup('Empresas de soluciones digitales','divSolucionesTecnologicas')">
                                     <div class="card"
-                                    style="background: url(complemento/img/Carrousel/SolucionesTecnologicas.jpg);">
+                                        style="background: url(complemento/img/Carrousel/SolucionesTecnologicas.jpg);">
                                         <div class="overlay"></div>
                                         <h5>Empresas de soluciones digitales</h5>
                                     </div>
@@ -846,7 +847,6 @@
                                 <div class="card-wrapper"
                                     onclick="abrirPopup('Certificadoras de sostenibilidad','divImagenCertificaciones')">
                                     <div class="card"
-                                        
                                         style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
                                         <div class="overlay"></div>
                                         <h5>Certificadoras de sostenibilidad</h5>
@@ -856,7 +856,7 @@
                         </div>
                         <button class="carousel-btn right" id="btnNext">&#10095;</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -1476,37 +1476,55 @@
                 contenedorCertifi.innerHTML = "";
                 contenedorSerGube.innerHTML = "";
 
+                function crearElemento(item) {
+                    const img = document.createElement('img');
+                    img.src = `complemento/img/Empresas/${item.RUC}.png`;
+                    img.alt = item.NombreComercial || "Empresa";
+                    img.addEventListener("click", () => detalleEmpresa(item.RUC));
+                    img.onerror = function () {
+                        const fallbackDiv = document.createElement("div");
+                        fallbackDiv.className = "fallback-logo";
+                        fallbackDiv.textContent = item.NombreComercial || "Empresa";
+                        fallbackDiv.addEventListener("click", () => detalleEmpresa(item.RUC));
+                        img.replaceWith(fallbackDiv);
+                    };
+                    return img;
+                }
+
                 data.filter(item => item.Categoria === "SolucionesTecnologicas")
                     .forEach(item => {
-                        const img = document.createElement('img');
-                        img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        img.alt = item.NombreComercial || "Empresa";
-                        img.addEventListener("click", () => {
-                            detalleEmpresa(item.RUC);
-                        });
-                        contenedorSolTech.appendChild(img);
+                        // const img = document.createElement('img');
+                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
+                        // img.alt = item.NombreComercial || "Empresa";
+                        // img.addEventListener("click", () => {
+                        //     detalleEmpresa(item.RUC);
+                        // });
+                        // contenedorSolTech.appendChild(img);
+                        contenedorSolTech.appendChild(crearElemento(item));
                     });
 
                 data.filter(item => item.Categoria === "CertificacionesSostenibilidad")
                     .forEach(item => {
-                        const img = document.createElement('img');
-                        img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        img.alt = item.NombreComercial || "Empresa";
-                        img.addEventListener("click", () => {
-                            detalleEmpresa(item.RUC);
-                        });
-                        contenedorCertifi.appendChild(img);
+                        // const img = document.createElement('img');
+                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
+                        // img.alt = item.NombreComercial || "Empresa";
+                        // img.addEventListener("click", () => {
+                        //     detalleEmpresa(item.RUC);
+                        // });
+                        // contenedorCertifi.appendChild(img);
+                        contenedorCertifi.appendChild(crearElemento(item));
                     });
 
                 data.filter(item => item.Categoria === "ServiciosGubernamentales")
                     .forEach(item => {
-                        const img = document.createElement('img');
-                        img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        img.alt = item.NombreComercial || "Empresa";
-                        img.addEventListener("click", () => {
-                            detalleEmpresa(item.RUC);
-                        });
-                        contenedorSerGube.appendChild(img);
+                        // const img = document.createElement('img');
+                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
+                        // img.alt = item.NombreComercial || "Empresa";
+                        // img.addEventListener("click", () => {
+                        //     detalleEmpresa(item.RUC);
+                        // });
+                        // contenedorSerGube.appendChild(img);
+                        contenedorSerGube.appendChild(crearElemento(item));
                     });
 
             } catch (error) {
