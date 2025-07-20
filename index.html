@@ -1592,6 +1592,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", cargarSolucionesTecnologicas);
+
         document.addEventListener("DOMContentLoaded", function () {
             const cards = document.querySelectorAll("#ponentesPanelistas .ponente-card-wrapper");
             const track = document.querySelector("#ponentesPanelistas .ponentes-carousel-track");
@@ -1609,33 +1610,31 @@
             }
 
             cards.forEach(card => {
-                
+
                 card.addEventListener("click", function (e) {
-                    if ("ontouchstart" in window) return;
+                    if ("ontouchstart" in window) return; 
                     toggleCard(card);
                     e.stopPropagation();
                 });
 
-                
-                card.addEventListener("touchstart", function (e) {
+
+                card.addEventListener("touchend", function (e) {
+                    if (track.classList.contains("dragging")) return;
                     toggleCard(card);
                     e.stopPropagation();
                 });
             });
 
-            
-            document.addEventListener("click", function (e) {
-                if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
-                    cards.forEach(c => c.classList.remove("show-desc"));
-                }
-            });
 
-            document.addEventListener("touchstart", function (e) {
+            function cerrarTodas(e) {
                 if (!e.target.closest("#ponentesPanelistas .ponente-card-wrapper")) {
                     cards.forEach(c => c.classList.remove("show-desc"));
                 }
-            });
+            }
+            document.addEventListener("click", cerrarTodas);
+            document.addEventListener("touchend", cerrarTodas);
         });
+
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
