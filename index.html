@@ -642,6 +642,70 @@
         .carousel-track.dragging .overlay {
             pointer-events: none;
         }
+
+
+
+        .boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #662483;
+            color: white;
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'FC_Regular';
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, width 0.3s ease;
+            z-index: 9999;
+            overflow: hidden;
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .boton-flotante img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .boton-flotante span {
+            opacity: 0;
+            white-space: nowrap;
+            margin-left: 8px;
+            pointer-events: none;
+            max-width: 0;
+            transition: opacity 0.3s ease, max-width 0.3s ease;
+            position: absolute;
+        }
+
+
+        .boton-flotante:hover,
+        .boton-flotante:active {
+            background-color: #662483;
+            transform: scale(1.05);
+            width: 150px;
+            border-radius: 30px;
+            justify-content: flex-start;
+            padding-left: 15px;
+        }
+
+        .boton-flotante:hover span,
+        .boton-flotante:active span {
+            opacity: 1;
+            max-width: 200px;
+            position: static;
+
+        }
     </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -1264,6 +1328,17 @@
     </div>
 
 
+    <!-- <div class="boton-flotante">
+        <img src="complemento/img/iconos/registro.png" alt="Registro">
+        <span>Inscríbete</span>
+    </div> -->
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNe4JtAjE56Hw9YEftnC1i-KtfcD_F4l4WpK7ePrAIXqi0cA/viewform"
+        target="_blank" class="boton-flotante">
+        <img src="complemento/img/iconos/registro.png" alt="Registro">
+        <span>Inscríbete</span>
+    </a>
+
     <div id="tooltip-container"></div>
     <script src="complemento/libs/jQuery/jQuery.min.js"></script>
     <script src="complemento/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -1496,37 +1571,16 @@
 
                 data.filter(item => item.Categoria === "SolucionesTecnologicas")
                     .forEach(item => {
-                        // const img = document.createElement('img');
-                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        // img.alt = item.NombreComercial || "Empresa";
-                        // img.addEventListener("click", () => {
-                        //     detalleEmpresa(item.RUC);
-                        // });
-                        // contenedorSolTech.appendChild(img);
                         contenedorSolTech.appendChild(crearElemento(item));
                     });
 
                 data.filter(item => item.Categoria === "CertificacionesSostenibilidad")
                     .forEach(item => {
-                        // const img = document.createElement('img');
-                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        // img.alt = item.NombreComercial || "Empresa";
-                        // img.addEventListener("click", () => {
-                        //     detalleEmpresa(item.RUC);
-                        // });
-                        // contenedorCertifi.appendChild(img);
                         contenedorCertifi.appendChild(crearElemento(item));
                     });
 
                 data.filter(item => item.Categoria === "ServiciosGubernamentales")
                     .forEach(item => {
-                        // const img = document.createElement('img');
-                        // img.src = `complemento/img/Empresas/${item.RUC}.png`;
-                        // img.alt = item.NombreComercial || "Empresa";
-                        // img.addEventListener("click", () => {
-                        //     detalleEmpresa(item.RUC);
-                        // });
-                        // contenedorSerGube.appendChild(img);
                         contenedorSerGube.appendChild(crearElemento(item));
                     });
 
@@ -1600,19 +1654,19 @@
             function toggleCard(card) {
                 if (track.classList.contains("dragging")) return;
 
-                
+
                 cards.forEach(c => {
                     if (c !== card) c.classList.remove("show-desc");
                 });
 
-                
+
                 card.classList.toggle("show-desc");
             }
 
             cards.forEach(card => {
 
                 card.addEventListener("click", function (e) {
-                    if ("ontouchstart" in window) return; 
+                    if ("ontouchstart" in window) return;
                     toggleCard(card);
                     e.stopPropagation();
                 });
