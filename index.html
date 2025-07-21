@@ -249,6 +249,14 @@
                 color: #3f3f3f;
                 margin-bottom: 10px;
                 font-size: 13px;
+                margin: 0 auto;
+            }
+
+            .details .buttons {
+
+                font-family: 'FC_Light';
+
+                margin: 0 auto;
             }
 
             .session {
@@ -293,6 +301,10 @@
             display: flex;
             width: max-content;
             margin: 0 auto;
+            user-select: none;
+            -webkit-user-drag: none;
+            touch-action: none;
+            cursor: default !important;
         }
 
         .carousel-group {
@@ -388,11 +400,11 @@
         }
 
         .carousel-btn.left {
-            left: 5px;
+            left: 15px;
         }
 
         .carousel-btn.right {
-            right: 5px;
+            right: 6px;
         }
 
         .info-adicional {
@@ -531,18 +543,6 @@
             transition: none;
         }
 
-        /* #ponentesPanelistas .ponentes-carousel-wrapper {
-            overflow-x: auto;
-         
-            scroll-behavior: smooth;
-        }
-
-        #ponentesPanelistas .ponentes-carousel-track {
-            display: flex;
-            cursor: grab;
-            user-select: none;
-            width: max-content;            
-        } */
 
         #ponentesPanelistas .ponentes-carousel-group {
             display: flex;
@@ -914,11 +914,11 @@
                                     </div>
                                 </div>
                                 <div class="card-wrapper"
-                                    onclick="abrirPopup('Certificadoras de sostenibilidad','divImagenCertificaciones')">
+                                    onclick="abrirPopup('Certificadoras','divImagenCertificaciones')">
                                     <div class="card"
                                         style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
                                         <div class="overlay"></div>
-                                        <h5>Certificadoras de sostenibilidad</h5>
+                                        <h5>Certificadoras</h5>
                                     </div>
                                 </div>
                             </div>
@@ -960,10 +960,6 @@
                             <h2>Datos turísticos mediante Big Data y cómo aprovecharlo</h2>
                             <p>a cargo de Emigdio Campos Diaz</p>
                             <div class="buttons">
-                                <a href="complemento/calendario/conferencias/DatosTuristicosmedianteBigData.ics"
-                                    class="button outlook text-center"
-                                    download="DatosTuristicosmedianteBigData.ics">Añadir a mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Datos+tur%C3%ADsticos+mediante+Big+Data+y+c%C3%B3mo+aprovecharlo&dates=20250903T150000Z/20250903T160000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -980,10 +976,6 @@
                             <h2>Inteligencia Artificial y su aplicación al sector Turismo</h2>
                             <p>a cargo de Edison Medina La Plata</p>
                             <div class="buttons">
-                                <a href="complemento/calendario/conferencias/InteligenciaArtificialTurismo.ics"
-                                    class="button outlook text-center"
-                                    download="InteligenciaArtificialTurismo.ics">Añadir a mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Inteligencia+Artificial+y+su+aplicaci%C3%B3n+al+sector+Turismo&dates=20250903T160000Z/20250903T170000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -1000,10 +992,6 @@
                             <h2>El impacto de la digitalización en la vida y el consumo en el Perú</h2>
                             <p>a cargo de Javier Alvarez Pecol</p>
                             <div class="buttons">
-                                <a href="complemento/calendario/conferencias/ImpactoDigitalizacionPeru.ics"
-                                    class="button outlook text-center" download="ImpactoDigitalizacionPeru.ics">Añadir a
-                                    mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=El+impacto+de+la+digitalizaci%C3%B3n+en+la+vida+y+el+consumo+en+el+Per%C3%BA&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -1025,14 +1013,10 @@
                         <div class="details">
                             <h2> Servicios gubernamentales para impulsar la digitalización</h2>
                             <p>a cargo de:</p>
-                            <p>- Jenniffer Duran - Produce (Perú)</p>
+                            <p>- Produce (Perú)</p>
                             <p>- Cenfotur</p>
-                            <p>- Krystel Carranza - Proinnovate (Perú)</p>
+                            <p>- Proinnovate (Perú)</p>
                             <div class="buttons">
-                                <a href="complemento/calendario/paneles/ServiciosGubernamentalesDigitalizacion.ics"
-                                    class="button outlook text-center"
-                                    download="ServiciosGubernamentalesDigitalizacion.ics">Añadir a mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -1047,16 +1031,12 @@
                         <div class="details">
                             <h2>¿Cómo impulsar las ventas digitales?</h2>
                             <p>a cargo de:</p>
-                            <p>- Nicolás Cabieses - Cluster (Perú)</p>
-                            <p>- Seb Tundis - Turtech (Argentina)</p>
-                            <p>- José Carlos Plaza - Bookingmotor by Carrusel (Perú)</p>
-                            <p>- José Garin - TurBox Go (Uruguay)</p>
+                            <p>- Cluster (Perú)</p>
+                            <p>- Turtech (Argentina)</p>
+                            <p>- Bookingmotor by Carrusel (Perú)</p>
+                            <p>- TurBox Go (Uruguay)</p>
 
                             <div class="buttons">
-                                <a href="complemento/calendario/paneles/ImpulsarVentasDigitales.ics"
-                                    class="button outlook text-center" download="ImpulsarVentasDigitales.ics">Añadir a
-                                    mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%C2%BFC%C3%B3mo+impulsar+las+ventas+digitales%3F&dates=20250903T200000Z/20250903T210000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -1071,14 +1051,10 @@
                         <div class="details">
                             <h2>Sostenibilidad y la competitividad turística</h2>
                             <p>a cargo de:</p>
-                            <p>- Andrés Torregrosa - Biosphere (España)</p>
-                            <p>- Rodrigo Cabrera - Tourcert (Alemania)</p>
-                            <p>- Katherine Castañeda - Profonampe (Perú)</p>
+                            <p>- Biosphere (España)</p>
+                            <p>- Tourcert (Alemania)</p>
+                            <p>- Profonampe (Perú)</p>
                             <div class="buttons">
-                                <a href="complemento/calendario/paneles/SostenibilidadTuristica.ics"
-                                    class="button outlook text-center" download="SostenibilidadTuristica.ics">Añadir a
-                                    mi <br>
-                                    Outlook</a>
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
@@ -1096,7 +1072,7 @@
         </div>
         <div class="wrapper-third" id="ponentes">
             <div class="wrapper-third-section">
-                <h1>PONENTES Y PANELISTAS</h1>
+                <h1>PONENTES</h1>
                 <div class="wrapper-first-item-right-section">
                     <p class="parrafo text-center">
                         Conoce a todos los profesionales y expertos que nos
@@ -1314,9 +1290,9 @@
                     <span class="dato">Expositor: </span>
                     <span class="pExpositor"></span>
                     <p class="aDescripcion"></p>
-                    <p class="dato">Contacto: </p>
+                    <p class="dato dContacto">Contacto: </p>
                     <p class="pContacto"> Mariella Sperduti</p>
-                    <p class="dato">Cargo: </p>
+                    <p class="dato dCargo">Cargo: </p>
                     <p class="pCargo">Coordinadora de proyectos</p>
                     <p class="dato">Mail: </p>
                     <p class="pCorreo">ptoyectos@nextsmart.solutions</p>
@@ -1355,6 +1331,188 @@
         const miniPopup = document.getElementById('miniPopup');
         var dataJson;
 
+        // (function () {
+        //     const carousels = [
+        //         {
+        //             selector: '#ponentesPanelistas .ponentes-carousel-track',
+        //             cardSelector: '.ponente-card-wrapper',
+        //             gap: 15
+        //         },
+        //         {
+        //             selector: '#directorioExpositores .carousel-track',
+        //             cardSelector: '.card-wrapper',
+        //             gap: 20
+        //         }
+        //     ];
+
+
+
+        //     carousels.forEach(({ selector, cardSelector, gap }) => {
+        //         const track = document.querySelector(selector);
+
+        //         const cards = document.querySelectorAll(`${selector} ${cardSelector}`);
+
+        //         if (!track || cards.length === 0) return;
+
+        //         let isDragging = false;
+        //         let hasMoved = false;
+        //         let startX = 0;
+        //         let currentTranslate = 0;
+        //         let prevTranslate = 0;
+        //         let cardWidth = 0;
+        //         let maxTranslate = 0;
+        //         let isCarouselActive = false;
+
+        //         function setLimits() {
+        //             cardWidth = cards[0].offsetWidth + gap;
+        //             const totalWidth = cardWidth * cards.length;
+        //             const visibleWidth = track.parentElement.offsetWidth;
+        //             maxTranslate = -(totalWidth - visibleWidth);
+
+        //             isCarouselActive = totalWidth > visibleWidth;
+        //             if (!isCarouselActive) {
+        //                 currentTranslate = 0;
+        //                 prevTranslate = 0;
+        //                 track.style.transform = 'translateX(0)';
+        //                 track.style.cursor = 'default';
+        //                 track.classList.remove('dragging');
+        //             } else {
+        //                 track.style.cursor = 'grab';
+        //             }
+        //         }
+
+        //         const btnPrev = document.querySelector(`${selector}`).parentElement.querySelector('.left');
+        //         const btnNext = document.querySelector(`${selector}`).parentElement.querySelector('.right');
+
+        //         function updateButtonsVisibility() {
+        //             if (isCarouselActive) {
+        //                 btnPrev.style.display = "block";
+        //                 btnNext.style.display = "block";
+        //             } else {
+        //                 btnPrev.style.display = "none";
+        //                 btnNext.style.display = "none";
+        //             }
+        //         }
+
+        //         btnPrev.addEventListener("click", () => {
+        //             if (!isCarouselActive) return;
+        //             currentTranslate += cardWidth;
+        //             applyBounds();
+        //             setTrackPosition();
+        //             snapToClosest();
+        //             prevTranslate = currentTranslate;
+        //         });
+
+        //         btnNext.addEventListener("click", () => {
+        //             if (!isCarouselActive) return;
+        //             currentTranslate -= cardWidth;
+        //             applyBounds();
+        //             setTrackPosition();
+        //             snapToClosest();
+        //             prevTranslate = currentTranslate;
+        //         });
+
+
+        //         function setLimitsWithButtons() {
+        //             setLimits();
+        //             updateButtonsVisibility();
+        //         }
+
+        //         window.addEventListener("resize", setLimitsWithButtons);
+        //         setLimitsWithButtons();
+
+        //         function setTrackPosition() {
+        //             track.style.transform = `translateX(${currentTranslate}px)`;
+        //         }
+
+        //         function applyBounds() {
+        //             if (currentTranslate > 0) currentTranslate = 0;
+        //             if (currentTranslate < maxTranslate) currentTranslate = maxTranslate;
+        //         }
+
+        //         function snapToClosest() {
+        //             let snapIndex = Math.round(Math.abs(currentTranslate) / cardWidth);
+        //             currentTranslate = -(snapIndex * cardWidth);
+        //             applyBounds();
+        //             setTrackPosition();
+        //             prevTranslate = currentTranslate;
+        //         }
+
+        //         track.addEventListener('mousedown', (e) => {
+        //             if (!isCarouselActive) return;
+        //             isDragging = true;
+        //             hasMoved = false;
+        //             startX = e.pageX;
+        //             track.style.cursor = 'grabbing';
+        //             track.classList.add('dragging');
+        //         });
+
+        //         track.addEventListener('mousemove', (e) => {
+        //             if (!isDragging || !isCarouselActive) return;
+        //             const diff = e.pageX - startX;
+        //             if (Math.abs(diff) > 5) hasMoved = true;
+        //             currentTranslate = prevTranslate + diff;
+        //             applyBounds();
+        //             setTrackPosition();
+        //         });
+
+        //         track.addEventListener('mouseup', (e) => {
+        //             if (!isCarouselActive) return;
+        //             isDragging = false;
+        //             track.style.cursor = 'grab';
+        //             track.classList.remove('dragging');
+        //             snapToClosest();
+
+        //             if (!hasMoved) {
+        //                 const target = e.target.closest(cardSelector);
+        //                 if (target) target.click();
+        //             }
+        //         });
+
+        //         track.addEventListener('mouseleave', () => {
+        //             if (!isDragging || !isCarouselActive) return;
+        //             isDragging = false;
+        //             track.style.cursor = 'grab';
+        //             track.classList.remove('dragging');
+        //             snapToClosest();
+        //         });
+
+        //         track.addEventListener('touchstart', (e) => {
+        //             if (!isCarouselActive) return;
+        //             isDragging = true;
+        //             hasMoved = false;
+        //             startX = e.touches[0].pageX;
+        //             track.classList.add('dragging');
+        //         });
+
+        //         track.addEventListener('touchmove', (e) => {
+        //             if (!isDragging || !isCarouselActive) return;
+        //             const diff = e.touches[0].pageX - startX;
+        //             if (Math.abs(diff) > 5) hasMoved = true;
+        //             currentTranslate = prevTranslate + diff;
+        //             applyBounds();
+        //             setTrackPosition();
+        //         });
+
+        //         track.addEventListener('touchend', (e) => {
+        //             if (!isCarouselActive) return;
+        //             isDragging = false;
+        //             track.classList.remove('dragging');
+        //             snapToClosest();
+
+        //             if (!hasMoved) {
+        //                 const target = e.target.closest(cardSelector);
+        //                 if (target) target.click();
+        //             }
+        //         });
+
+
+
+        //         setLimits();
+        //         window.addEventListener('resize', setLimits);
+        //     });
+        // })();
+
         (function () {
             const carousels = [
                 {
@@ -1369,18 +1527,12 @@
                 }
             ];
 
-
-
             carousels.forEach(({ selector, cardSelector, gap }) => {
                 const track = document.querySelector(selector);
                 const cards = document.querySelectorAll(`${selector} ${cardSelector}`);
                 if (!track || cards.length === 0) return;
 
-                let isDragging = false;
-                let hasMoved = false;
-                let startX = 0;
                 let currentTranslate = 0;
-                let prevTranslate = 0;
                 let cardWidth = 0;
                 let maxTranslate = 0;
                 let isCarouselActive = false;
@@ -1392,14 +1544,13 @@
                     maxTranslate = -(totalWidth - visibleWidth);
 
                     isCarouselActive = totalWidth > visibleWidth;
+
                     if (!isCarouselActive) {
                         currentTranslate = 0;
-                        prevTranslate = 0;
                         track.style.transform = 'translateX(0)';
                         track.style.cursor = 'default';
-                        track.classList.remove('dragging');
                     } else {
-                        track.style.cursor = 'grab';
+                        track.style.cursor = 'default'; // ✅ sin "grab"
                     }
                 }
 
@@ -1421,8 +1572,6 @@
                     currentTranslate += cardWidth;
                     applyBounds();
                     setTrackPosition();
-                    snapToClosest();
-                    prevTranslate = currentTranslate;
                 });
 
                 btnNext.addEventListener("click", () => {
@@ -1430,18 +1579,7 @@
                     currentTranslate -= cardWidth;
                     applyBounds();
                     setTrackPosition();
-                    snapToClosest();
-                    prevTranslate = currentTranslate;
                 });
-
-
-                function setLimitsWithButtons() {
-                    setLimits();
-                    updateButtonsVisibility();
-                }
-
-                window.addEventListener("resize", setLimitsWithButtons);
-                setLimitsWithButtons();
 
                 function setTrackPosition() {
                     track.style.transform = `translateX(${currentTranslate}px)`;
@@ -1452,87 +1590,15 @@
                     if (currentTranslate < maxTranslate) currentTranslate = maxTranslate;
                 }
 
-                function snapToClosest() {
-                    let snapIndex = Math.round(Math.abs(currentTranslate) / cardWidth);
-                    currentTranslate = -(snapIndex * cardWidth);
-                    applyBounds();
-                    setTrackPosition();
-                    prevTranslate = currentTranslate;
+                function setLimitsWithButtons() {
+                    setLimits();
+                    updateButtonsVisibility();
                 }
 
-                track.addEventListener('mousedown', (e) => {
-                    if (!isCarouselActive) return;
-                    isDragging = true;
-                    hasMoved = false;
-                    startX = e.pageX;
-                    track.style.cursor = 'grabbing';
-                    track.classList.add('dragging');
-                });
-
-                track.addEventListener('mousemove', (e) => {
-                    if (!isDragging || !isCarouselActive) return;
-                    const diff = e.pageX - startX;
-                    if (Math.abs(diff) > 5) hasMoved = true;
-                    currentTranslate = prevTranslate + diff;
-                    applyBounds();
-                    setTrackPosition();
-                });
-
-                track.addEventListener('mouseup', (e) => {
-                    if (!isCarouselActive) return;
-                    isDragging = false;
-                    track.style.cursor = 'grab';
-                    track.classList.remove('dragging');
-                    snapToClosest();
-
-                    if (!hasMoved) {
-                        const target = e.target.closest(cardSelector);
-                        if (target) target.click();
-                    }
-                });
-
-                track.addEventListener('mouseleave', () => {
-                    if (!isDragging || !isCarouselActive) return;
-                    isDragging = false;
-                    track.style.cursor = 'grab';
-                    track.classList.remove('dragging');
-                    snapToClosest();
-                });
-
-                track.addEventListener('touchstart', (e) => {
-                    if (!isCarouselActive) return;
-                    isDragging = true;
-                    hasMoved = false;
-                    startX = e.touches[0].pageX;
-                    track.classList.add('dragging');
-                });
-
-                track.addEventListener('touchmove', (e) => {
-                    if (!isDragging || !isCarouselActive) return;
-                    const diff = e.touches[0].pageX - startX;
-                    if (Math.abs(diff) > 5) hasMoved = true;
-                    currentTranslate = prevTranslate + diff;
-                    applyBounds();
-                    setTrackPosition();
-                });
-
-                track.addEventListener('touchend', (e) => {
-                    if (!isCarouselActive) return;
-                    isDragging = false;
-                    track.classList.remove('dragging');
-                    snapToClosest();
-
-                    if (!hasMoved) {
-                        const target = e.target.closest(cardSelector);
-                        if (target) target.click();
-                    }
-                });
-
-                setLimits();
-                window.addEventListener('resize', setLimits);
+                window.addEventListener("resize", setLimitsWithButtons);
+                setLimitsWithButtons();
             });
         })();
-
 
 
 
@@ -1618,6 +1684,12 @@
             miniPopup.style.display = 'none';
         }
         function detalleEmpresa(ruc) {
+
+            document.querySelector(".dContacto").style.display = "block";
+            document.querySelector(".dCargo").style.display = "block";
+            document.querySelector(".pContacto").style.display = "block";
+            document.querySelector(".pCargo").style.display = "block";
+
             const empresa = dataJson.find(item => item.RUC == ruc);
             if (!empresa) {
                 console.error("No se encontró la empresa con RUC:", ruc);
@@ -1628,6 +1700,14 @@
             const paginaWeb = document.querySelector(".aPaginaWeb");
             paginaWeb.href = empresa.PaginaWeb || "#";
             paginaWeb.textContent = empresa.PaginaWeb ? "Página web" : "Sin página";
+
+
+            if (empresa.Categoria == "ServiciosGubernamentales") {
+                document.querySelector(".dContacto").style.display = "none";
+                document.querySelector(".dCargo").style.display = "none";
+                document.querySelector(".pContacto").style.display = "none";
+                document.querySelector(".pCargo").style.display = "none";
+            }
 
             document.querySelector(".pContacto").textContent = empresa.Contacto || "";
             document.querySelector(".pCargo").textContent = empresa.Cargo || "";
