@@ -140,6 +140,7 @@
             font-size: 28px;
             color: #000000;
             font-family: 'FC_Regular';
+            font-weight: normal;
         }
 
         .header p {
@@ -173,6 +174,7 @@
             font-family: 'FC_Regular';
             line-height: 150%;
             font-size: 15px;
+            font-weight: normal;
         }
 
         .time .min {
@@ -194,6 +196,7 @@
             font-size: 20px;
             color: #662483;
             font-family: 'FC_Regular';
+            font-weight: normal;
         }
 
 
@@ -560,11 +563,11 @@
         #ponentesPanelistas .ponente-nombre {
             margin-top: 8px;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: normal;
             text-align: center;
             min-width: 312px;
             color: #662483;
-            font-family: 'FC_Regular';
+            font-family: 'FC_Regular';            
         }
 
         #ponentesPanelistas .ponente-card {
@@ -665,7 +668,7 @@
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease, width 0.3s ease;
+            transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease;
             z-index: 9999;
             overflow: hidden;
             text-decoration: none;
@@ -684,7 +687,7 @@
             margin-left: 8px;
             pointer-events: none;
             max-width: 0;
-            transition: opacity 0.3s ease, max-width 0.3s ease;
+            transition: opacity 0s ease, max-width 0.2s ease;
             position: absolute;
         }
 
@@ -706,6 +709,19 @@
             position: static;
 
         }
+
+        .imgLogo {
+            width: 210px;
+            margin: 10px 0px;
+        }
+        
+
+        .sEmpPromperu {
+            color: #662483;
+            font-family: 'FC_Regular';
+            line-height: 150%;
+            font-size: 15px;
+        }
     </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -723,15 +739,14 @@
         <div class="wrapper-menu">
             <div class="wrapper-menu-container">
                 <div class="wrapper-menu-left">
-                    <div class="wrapper-menu-left-container">
+                    <a href="https://www.promperu.gob.pe/TurismoIN" target="_blank"><img
+                            src="complemento/img/turismoin-summit.png" class="imgLogo"></a>
+                    <!-- <div class="wrapper-menu-left-container">
                         <div>
-                            <a href="https://www.promperu.gob.pe/" target="_blank"><img
-                                    src="complemento/img/promperu.png"></a>
-                            <span></span>
                             <a href="https://www.promperu.gob.pe/TurismoIN" target="_blank"><img
-                                    src="complemento/img/turismoin.png"></a>
+                                    src="complemento/img/turismoin-summit.png"></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="wrapper-menu-right">
                     <ul>
@@ -1011,13 +1026,13 @@
                             <h3 class="text-center hour">03:00 p. m. - 04:00 p. m.</h3>
                         </div>
                         <div class="details">
-                            <h2> Servicios gubernamentales para impulsar la digitalización</h2>
+                            <h2>Sostenibilidad y la competitividad turística</h2>
                             <p>a cargo de:</p>
-                            <p>- Produce (Perú)</p>
-                            <p>- Cenfotur</p>
-                            <p>- Proinnovate (Perú)</p>
+                            <p>- Biosphere (España)</p>
+                            <p>- Tourcert (Alemania)</p>
+                            <p>- Profonampe (Perú)</p>
                             <div class="buttons">
-                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
@@ -1049,17 +1064,18 @@
                             <h3 class="text-center hour">05:00 p. m. - 06:00 p. m.</h3>
                         </div>
                         <div class="details">
-                            <h2>Sostenibilidad y la competitividad turística</h2>
+                            <h2> Servicios gubernamentales para impulsar la digitalización</h2>
                             <p>a cargo de:</p>
-                            <p>- Biosphere (España)</p>
-                            <p>- Tourcert (Alemania)</p>
-                            <p>- Profonampe (Perú)</p>
+                            <p>- Produce (Perú)</p>
+                            <p>- Cenfotur</p>
+                            <p>- Proinnovate (Perú)</p>
                             <div class="buttons">
-                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Sostenibilidad+y+la+competitividad+tur%C3%ADstica&dates=20250903T210000Z/20250903T220000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
+                                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
                                     class="button google text-center" target="_blank">Añadir a mi <br> Google
                                     Calendar</a>
                             </div>
                         </div>
+
                     </div>
 
 
@@ -1622,6 +1638,7 @@
                 contenedorSerGube.innerHTML = "";
 
                 function crearElemento(item) {
+
                     const img = document.createElement('img');
                     img.src = `complemento/img/Empresas/${item.RUC}.png`;
                     img.alt = item.NombreComercial || "Empresa";
@@ -1633,20 +1650,38 @@
                         fallbackDiv.addEventListener("click", () => detalleEmpresa(item.RUC));
                         img.replaceWith(fallbackDiv);
                     };
+
+                    if (item.RUC == "Ytuqueplanes") {
+                        img.style.backgroundColor = "#33aba0";
+
+                    }
+
+
+                    if (item.RUC == "Coexpositores" || item.RUC == "TurismoReuniones") {
+                        const tempDiv = document.createElement('div');
+                        const tempSpan = document.createElement('span');
+                        tempDiv.classList.add("text-center");
+                        tempSpan.classList.add("sEmpPromperu");
+                        tempSpan.innerText = item.NombreComercial;
+                        tempDiv.append(img);
+                        tempDiv.append(tempSpan);
+                        return tempDiv;
+                    }
+
                     return img;
                 }
 
-                data.filter(item => item.Categoria === "SolucionesTecnologicas")
+                data.filter(item => item.Categoria === "Soluciones tecnológicas")
                     .forEach(item => {
                         contenedorSolTech.appendChild(crearElemento(item));
                     });
 
-                data.filter(item => item.Categoria === "CertificacionesSostenibilidad")
+                data.filter(item => item.Categoria === "Certificadoras")
                     .forEach(item => {
                         contenedorCertifi.appendChild(crearElemento(item));
                     });
 
-                data.filter(item => item.Categoria === "ServiciosGubernamentales")
+                data.filter(item => item.Categoria === "Servicios gubernamentales")
                     .forEach(item => {
                         contenedorSerGube.appendChild(crearElemento(item));
                     });
@@ -1702,7 +1737,7 @@
             paginaWeb.textContent = empresa.PaginaWeb ? "Página web" : "Sin página";
 
 
-            if (empresa.Categoria == "ServiciosGubernamentales") {
+            if (empresa.Categoria == "Servicios gubernamentales") {
                 document.querySelector(".dContacto").style.display = "none";
                 document.querySelector(".dCargo").style.display = "none";
                 document.querySelector(".pContacto").style.display = "none";
@@ -1711,7 +1746,7 @@
 
             document.querySelector(".pContacto").textContent = empresa.Contacto || "";
             document.querySelector(".pCargo").textContent = empresa.Cargo || "";
-            // document.querySelector(".pCorreo").textContent = empresa.Correo || "";
+
             const correoEl = document.querySelector(".pCorreo");
             correoEl.textContent = empresa.Correo || "Sin correo";
             correoEl.style.cursor = empresa.Correo ? "pointer" : "default";

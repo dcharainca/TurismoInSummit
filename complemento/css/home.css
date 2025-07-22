@@ -525,6 +525,7 @@
     text-align: center;
     display: block;
     color: #662483;
+    font-weight: normal;
 }
 
 .wrapper-third-list {
@@ -696,8 +697,7 @@
 .wrapper-fourth-section h1 {
     font-family: 'FC_Regular';
     font-size: 32px;
-    /* font-weight: normal; */
-    /* line-height: 130%; */
+    font-weight: normal;    
     text-align: center;
     display: block;
     color: #31363a;

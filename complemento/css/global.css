@@ -21,6 +21,7 @@
 	list-style: none;
 	outline: 0;
 	box-sizing: border-box;
+	font-weight: normal;
 }
 
 ::-webkit-scrollbar {

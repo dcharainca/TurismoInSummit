@@ -68,7 +68,7 @@
 
 .wrapper-menu-right ul li a {
     font-family: 'FC_Regular';
-    /* font-weight: bold; */
+    font-weight: normal;
     font-size: 14px;
     text-decoration: none;
     color: #fff;
@@ -404,7 +404,7 @@
 }
 @media only screen and (min-width: 1200px) and (max-width: 1299px) {
     .wrapper-menu-container {
-        width: 1000px;
+        width: 1100px;
     }
     
     .wrapper-hero-open {
@@ -434,7 +434,8 @@
 }
 @media only screen and (min-width: 1300px) and (max-width: 1399px) {
     .wrapper-menu-container {
-        width: 1050px;
+        /* width: 1050px; */
+        width: 1150px;
     }
     
     .wrapper-hero-open {
