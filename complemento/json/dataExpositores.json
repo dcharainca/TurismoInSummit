@@ -30,7 +30,8 @@
       "Descripcion": "Artesanías del Perú impulsa la promoción y articulación comercial de artesanos miembros del Registro Nacional del Artesano; fortalece sus capacidades a través de formación en ‘marketing’ digital y otras herramientas.",
       "Contacto": "Bélgica Chambi / MINCETUR",
       "Cargo": "Profesional de la Dirección de Desarrollo Artesanal",
-      "Correo": "servicios_dda45@mincetur.gob.pe"
+      "Correo": "servicios_dda45@mincetur.gob.pe",
+      "Orden":11
     },
     {
       "RazonSocial": "Metacerv peru S.A.C.",
@@ -140,7 +141,7 @@
       "Descripcion": "Turtech by Seb Tundis es un programa de 4 meses diseñado para empresas de turismo que buscan automatizar su ecosistema digital. Combina sesiones grupales, soporte diario y herramientas con IA para convertir campañas en máquinas de ventas activas 24/7.",
       "Contacto": "Sebastián José Tundis",
       "Cargo": "Sebastián José Tundis",
-      "Correo": "+54 9 11 3075-9614"
+      "Correo": "coty@madzen.travel"
     },
     {
       "RazonSocial": "STRINGNET MULTIMEDIA SYSTEM SAC",
@@ -162,7 +163,8 @@
       "Descripcion": "La Secretaría de Gobierno y Transformación Digital de la Presidencia del Consejo de Ministros articula sectores para impulsar el gobierno digital y ejecuta políticas y estrategias nacionales. Ofrece cursos y recursos gratuitos sobre economía digital.",
       "Contacto": "Paolo Alegría Granados",
       "Cargo": "Especialista en Talento Digitial",
-      "Correo": "palegria@pcm.gob.pe"
+      "Correo": "palegria@pcm.gob.pe",
+      "Orden":10
     },
     {
       "RazonSocial": "CENFOTUR",
@@ -173,7 +175,8 @@
       "Descripcion": "CENFOTUR ofrece programas de fortalecimiento de competencias con una oferta educativa actualizada y pertinente. Responde a las demandas del mercado laboral y de las empresas turísticas con el objetivo de mejorar la competitividad del sector.",
       "Contacto": "NO APLICA",
       "Cargo": "NO APLICA",
-      "Correo": "NO APLICA"
+      "Correo": "lnieto@cenfotur.edu.pe",
+      "Orden":9
     },
     {
       "RazonSocial": "Ideas Más Acción S.A.S ",
@@ -239,7 +242,8 @@
       "Descripcion": "El Aula Virtual MINCETUR ofrece formación gratuita y especializada en gestión turística para fortalecer las capacidades de actores públicos y privados, y así contribuir a una gestión competitiva y sostenible de los destinos en todo el Perú.",
       "Contacto": "Johana Lizbeth Mesinas Menacho",
       "Cargo": "Especialista en turismo",
-      "Correo": "servicios_dpdt278@mincetur.gob.pe"
+      "Correo": "servicios_dpdt278@mincetur.gob.pe",
+      "Orden":12
     },
     {
       "RazonSocial": "PROFONANPE",
@@ -250,7 +254,8 @@
       "Descripcion": "El fondo concursable Bosques Tropicales financia iniciativas que promuevan la conservación y el uso sostenible de los bosques amazónicos. Impulsa proyectos comunitarios y turísticos que protegen la biodiversidad y fortalezcan el desarrollo local.",
       "Contacto": "Cecilia Huamanchumo De la Cuba",
       "Cargo": "Jefa del proyecto Bosques Tropicales ",
-      "Correo": "chuamanchumo@profonanpe.org.pe "
+      "Correo": "chuamanchumo@profonanpe.org.pe",
+      "Orden":13
     },
     {
       "RazonSocial": "Internova Multimedia SAC",
@@ -305,7 +310,8 @@
       "Descripcion": "Servicios formativos que impulsan la innovación, la transformación digital y la gestión del conocimiento en MiPyMEs turísticas, mediante mentorías prácticas que generan productos estratégicos para su mejora y competitividad.",
       "Contacto": " RAUL ENRIQUE ANGELINO OLIVA CASTILLO",
       "Cargo": "Especialista en innovación y gestión de conocimiento ",
-      "Correo": "os2025.601@cenfotur.edu.pe"
+      "Correo": "os2025.601@cenfotur.edu.pe",
+      "Orden":8
     },
     {
       "RUC": "Restaurantepe",
@@ -340,7 +346,9 @@
       "PaginaWeb": "https://www.turismoin.pe/",
       "Descripcion": "Sistema de información estratégica de turismo de PROMPERÚ, impulsa la competitividad del turismo nacional al proveer conocimientos necesarios para aprovechar nuevas oportunidades.",
       "Contacto": "Christian Mendoza",
-      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística"
+      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística",
+      "Correo": "turismoin@promperu.gob.pe",
+      "Orden":1
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -349,7 +357,9 @@
       "Categoria": "Servicios gubernamentales",
       "Descripcion": "Iniciativa de capacitación gratuita dirigida a los tomadores de decisiones de las agencias de viaje y alojamientos mipymes a nivel nacional. El Programa Comercial es virtual y decentralizado, accesible desde cualquier lugar del Perú.",
       "Contacto": "Christian Mendoza",
-      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística"
+      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística",
+      "Correo": "programacomercial@promperu.gob.pe",
+      "Orden":3
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -359,7 +369,9 @@
       "PaginaWeb": "https://aulavirtualturismo.promperu.gob.pe/",
       "Descripcion": "Plataforma virtual con capacitaciones gratuitas para mipymes turísticas, en materia de gestión comercial, ventas, herramientas digitales, inteligencia de mercado y marketing turístico, entre otros.",
       "Contacto": "Christian Mendoza",
-      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística"
+      "Cargo": "Subdirector de Inteligencia y Prospectiva Turística",
+      "Correo": "aulavirtualturismo@promperu.gob.pe",
+      "Orden":2
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -367,7 +379,9 @@
       "NombreComercial": "Coexpositores ferias internacionales",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://coexpositores.promperu.gob.pe/",
-      "Descripcion": "La plataforma de Coexpositores impulsa la internacionalización de empresas turísticas peruanas, conectándolas con compradores globales mediante eventos clave, fortaleciendo su presencia comercial y competitividad."
+      "Descripcion": "La plataforma de Coexpositores impulsa la internacionalización de empresas turísticas peruanas, conectándolas con compradores globales mediante eventos clave, fortaleciendo su presencia comercial y competitividad.",
+      "Correo": "coexpositores@promperu.gob.pe",
+      "Orden":4
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -375,7 +389,9 @@
       "NombreComercial": " Y tú qué planes?",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://www.ytuqueplanes.com/ ",
-      "Descripcion": "Es la plataforma oficial de PROMPERÚ que promociona destinos, experiencias y servicios turísticos del Perú, conectando a viajeros con empresas formales del sector para impulsar el turismo interno."
+      "Descripcion": "Es la plataforma oficial de PROMPERÚ que promociona destinos, experiencias y servicios turísticos del Perú, conectando a viajeros con empresas formales del sector para impulsar el turismo interno.",
+      "Correo": "ytuqueplanes@promperu.gob.pe",
+      "Orden":7
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -383,7 +399,9 @@
       "NombreComercial": "Turismo de Reuniones",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://meetings.peru.travel/",
-      "Descripcion": "Servicio cuya misión es promover el segmento MICE a través de participación en ferias especializadas de la industria de reuniones, ruedas y misiones comerciales, captación de eventos asociativos, contribución a la profesionalización de los agentes turísticos en el segmento MICE, entre otras acciones."
+      "Descripcion": "Servicio cuya misión es promover el segmento MICE a través de participación en ferias especializadas de la industria de reuniones, ruedas y misiones comerciales, captación de eventos asociativos, contribución a la profesionalización de los agentes turísticos en el segmento MICE, entre otras acciones.",
+      "Correo": "turismodereuniones@promperu.gob.pe",
+      "Orden":5
     },
     {
       "RazonSocial": "PROMPERÚ",
@@ -391,6 +409,8 @@
       "NombreComercial": "Licenciatarios de marca",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://sites.peru.info/es-pe/marca-peru/programa-de-licenciatarios ",
-      "Descripcion": "Ser licenciatario de la Marca Perú y/o de las marcas sectoriales permite acceder a beneficios que ayudarán a consolidar el buen posicionamiento e imagen positiva del licenciatario en el mercado."
+      "Descripcion": "Ser licenciatario de la Marca Perú y/o de las marcas sectoriales permite acceder a beneficios que ayudarán a consolidar el buen posicionamiento e imagen positiva del licenciatario en el mercado.",
+      "Correo": "marcapais@promperu.gob.pe",
+      "Orden":6
     }
   ]

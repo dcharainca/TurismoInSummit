@@ -808,7 +808,7 @@
                         <div class="wrapper-first-item-right-section">
 
                             <p class="parrafo">
-                                Es la primera feria de herramientas para la transformación digital e innovación
+                                Es la primera feria de soluciones tecnológicas para la transformación digital e innovación
                                 enfocada exclusivamente en proveedores de servicios turísticos del Perú.
                             </p>
                         </div>
@@ -830,7 +830,7 @@
                                 mipymes turísticas nacionales. Entre
                                 los expositores habrá representantes de empresas de soluciones tecnológicas,
                                 certificadoras de sostenibilidad y servicios
-                                gubernamentales (PROMPERÚ, MINCETUR, Presidencia del Consejos de Ministros y PRODUCE,
+                                gubernamentales (PROMPERÚ, MINCETUR y Presidencia del Consejos de Ministros,
                                 entre otros).
                             </p>
                         </div>
@@ -931,7 +931,7 @@
                                 <div class="card-wrapper"
                                     onclick="abrirPopup('Certificadoras','divImagenCertificaciones')">
                                     <div class="card"
-                                        style="background: url(complemento/img/Carrousel/CertificacionesDeSostenibilidad.jpg);">
+                                        style="background: url(complemento/img/Carrousel/Certificadoras.jpg);">
                                         <div class="overlay"></div>
                                         <h5>Certificadoras</h5>
                                     </div>
@@ -972,7 +972,7 @@
 
                         </div>
                         <div class="details">
-                            <h2>Datos turísticos mediante Big Data y cómo aprovecharlo</h2>
+                            <h2>Datos turísticos mediante Big Data y cómo aprovecharlos</h2>
                             <p>a cargo de Emigdio Campos Diaz</p>
                             <div class="buttons">
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Datos+tur%C3%ADsticos+mediante+Big+Data+y+c%C3%B3mo+aprovecharlo&dates=20250903T150000Z/20250903T160000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
@@ -988,7 +988,7 @@
 
                         </div>
                         <div class="details">
-                            <h2>Inteligencia Artificial y su aplicación al sector Turismo</h2>
+                            <h2>Inteligencia Artificial y su aplicación al sector turismo</h2>
                             <p>a cargo de Edison Medina La Plata</p>
                             <div class="buttons">
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Inteligencia+Artificial+y+su+aplicaci%C3%B3n+al+sector+Turismo&dates=20250903T160000Z/20250903T170000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
@@ -1067,7 +1067,7 @@
                             <h2> Servicios gubernamentales para impulsar la digitalización</h2>
                             <p>a cargo de:</p>
                             <p>- Produce (Perú)</p>
-                            <p>- Cenfotur</p>
+                            <p>- Cenfotur (Perú)</p>
                             <p>- Proinnovate (Perú)</p>
                             <div class="buttons">
                                 <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Servicios+gubernamentales+para+impulsar+la+digitalizaci%C3%B3n&dates=20250903T170000Z/20250903T180000Z&details=TurismoIn+Summit&location=Sala+Lima+1"
@@ -1657,7 +1657,7 @@
                     }
 
 
-                    if (item.RUC == "Coexpositores" || item.RUC == "TurismoReuniones") {
+                    if (item.RUC == "Coexpositores" || item.RUC == "TurismoReuniones" || item.RUC=="20131372001_1" || item.RUC=="20131372001" || item.RUC=="20168999926") {
                         const tempDiv = document.createElement('div');
                         const tempSpan = document.createElement('span');
                         tempDiv.classList.add("text-center");
@@ -1682,6 +1682,7 @@
                     });
 
                 data.filter(item => item.Categoria === "Servicios gubernamentales")
+                    .sort((a, b) => a.Orden - b.Orden)
                     .forEach(item => {
                         contenedorSerGube.appendChild(crearElemento(item));
                     });
