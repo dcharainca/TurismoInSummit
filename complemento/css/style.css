@@ -626,7 +626,8 @@
 
 .imgLogo {
   width: 210px;
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
+  margin: 0;
 }
 
 .sEmpPromperu {
