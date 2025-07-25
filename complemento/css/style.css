@@ -625,7 +625,7 @@
 }
 
 .imgLogo {
-  width: 210px;
+  width: 195px;
   /* margin: 10px 0px; */
   margin: 0;
 }
@@ -639,7 +639,7 @@
 
 @media only screen and (min-width: 1300px) {
   .imgLogo {
-    width: 260px;    
+    width: 245px;    
   }
 
 }
