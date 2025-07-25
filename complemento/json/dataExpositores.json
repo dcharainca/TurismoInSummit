@@ -169,7 +169,7 @@
     {
       "RazonSocial": "CENFOTUR",
       "RUC": 20131372001,
-      "NombreComercial": "Cenfotur - Fortalecimiento de competencias",
+      "NombreComercial": "Fortalecimiento de competencias",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://www.cenfotur.edu.pe/",
       "Descripcion": "CENFOTUR ofrece programas de fortalecimiento de competencias con una oferta educativa actualizada y pertinente. Responde a las demandas del mercado laboral y de las empresas turísticas con el objetivo de mejorar la competitividad del sector.",
@@ -304,7 +304,7 @@
     {
       "RazonSocial": "CENFOTUR",
       "RUC": "20131372001_1",
-      "NombreComercial": "CENFOTUR - Innovación y transferencia tecnológica",
+      "NombreComercial": "Innovación y transferencia tecnológica",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://www.cenfotur.edu.pe/",
       "Descripcion": "Servicios formativos que impulsan la innovación, la transformación digital y la gestión del conocimiento en MiPyMEs turísticas, mediante mentorías prácticas que generan productos estratégicos para su mejora y competitividad.",
@@ -408,9 +408,19 @@
       "RUC": "Licenciatarios",
       "NombreComercial": "Licenciatarios de marca",
       "Categoria": "Servicios gubernamentales",
-      "PaginaWeb": "https://sites.peru.info/es-pe/marca-peru/programa-de-licenciatarios ",
+      "PaginaWeb": "https://sites.peru.info/es-pe/marca-peru/programa-de-licenciatarios",
       "Descripcion": "Ser licenciatario de la Marca Perú y/o de las marcas sectoriales permite acceder a beneficios que ayudarán a consolidar el buen posicionamiento e imagen positiva del licenciatario en el mercado.",
       "Correo": "marcapais@promperu.gob.pe",
       "Orden":6
+    },
+    {
+      "RazonSocial": "PRODUCE",
+      "RUC": "ProInnovate",
+      "NombreComercial": "ProInnóvate",
+      "Categoria": "Servicios gubernamentales",
+      "PaginaWeb": "https://www.gob.pe/proinnovate",
+      "Descripcion": "ProInnóvate es un programa que promueve la innovación, el emprendimiento y el desarrollo tecnológico en el Perú, financiando y acompañando proyectos con alto potencial para fortalecer la competitividad y el crecimiento productivo del país.",
+      "Correo": "consultas@proinnovate.gob.pe",
+      "Orden":14
     }
   ]
