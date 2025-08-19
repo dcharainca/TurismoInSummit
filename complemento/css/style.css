@@ -582,29 +582,6 @@
   color: white;
 }
 
-.boton-flotante img {
-  width: 100px;
-  height: auto;
-}
-
-.boton-flotante span {
-  position: absolute;
-  right: 105px;
-  top: 10px;
-  transform: translateY(-50%) translateX(-12px);
-  background: #662483;
-  color: #fff;
-  padding: 15px 18px;
-  border-radius: 20px;
-  font-size: 14px;
-  opacity: 0;
-  /* pointer-events: none; */
-  white-space: nowrap;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  opacity: 1;
-}
-
 .boton-flotante span::after {
   content: "";
   position: absolute;
@@ -652,5 +629,79 @@
 @media only screen and (min-width: 1300px) {
   .imgLogo {
     width: 245px;
+  }
+}
+
+
+
+.boton-flotante img {
+  width: 50px;
+  height: auto;
+}
+
+.boton-flotante span {
+  position: absolute;
+  right: 105px;
+  top: 10px;
+  transform: translateY(-50%) translateX(-12px);
+  background: #662483;
+  color: #fff;
+  padding: 15px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;  
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .boton-flotante {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton-flotante span {    
+    right: 70px;    
+  }
+}
+
+/* Smartphones estándar (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .boton-flotante span {    
+    right: 70px;    
+  }
+}
+
+/* Tablets y pantallas medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .boton-flotante span {    
+    right: 110px;    
+  }
+  .boton-flotante img {
+    width: 100px;    
+  }
+}
+
+/* Laptops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .boton-flotante span {    
+    right: 105px;    
+  }
+  .boton-flotante img {
+    width: 100px;
+    
+  }
+}
+
+/*  Monitores grandes (1441px en adelante) */
+@media (min-width: 1441px) {
+  .boton-flotante span {    
+    right: 105px;    
+  }
+  .boton-flotante img {
+    width: 100px;    
   }
 }
