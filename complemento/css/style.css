@@ -569,15 +569,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #662483;
-  color: white;
-  width: 60px;
-
-  height: 60px;
-
-  border-radius: 50%;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,44 +577,64 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease;
   z-index: 9999;
-  overflow: hidden;
   text-decoration: none;
   color: white;
 }
 
 .boton-flotante img {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: auto;
 }
 
 .boton-flotante span {
-  opacity: 0;
-  white-space: nowrap;
-  margin-left: 8px;
-  pointer-events: none;
-  max-width: 0;
-  transition: opacity 0s ease, max-width 0.2s ease;
   position: absolute;
-}
-
-.boton-flotante:hover,
-.boton-flotante:active {
-  background-color: #662483;
-  transform: scale(1.05);
-  width: 150px;
-  border-radius: 30px;
-  justify-content: flex-start;
-  padding-left: 15px;
-}
-
-.boton-flotante:hover span,
-.boton-flotante:active span {
+  right: 105px;
+  top: 10px;
+  transform: translateY(-50%) translateX(-12px);
+  background: #662483;
+  color: #fff;
+  padding: 15px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;
+  /* pointer-events: none; */
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   opacity: 1;
-  max-width: 200px;
-  position: static;
 }
+
+.boton-flotante span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 20px;
+  background: #662483;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.boton-flotante span {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+/* .boton-flotante:hover span {
+  opacity: 0;
+  transform: translateY(-50%) translateX(-22px);
+} */
 
 .imgLogo {
   width: 195px;
@@ -639,7 +651,6 @@
 
 @media only screen and (min-width: 1300px) {
   .imgLogo {
-    width: 245px;    
+    width: 245px;
   }
-
 }

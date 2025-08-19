@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	// $("#spInscribete").on("click",()=>{
+	// 	$("#aBtnInscribete").trigger("click");
+	// });
+
 	$('.popupVideoLink').magnificPopup({
 		disableOn: 768,
 		fixedContentPos: true,
