@@ -117,6 +117,11 @@
   font-size: 15px;
 }
 
+.tituloAuditorio{
+  color: #000000 !important;
+  margin-top: 50px;
+}
+
 .details {
   display: flex;
   flex-direction: column;
@@ -124,6 +129,11 @@
   align-items: start;
   width: 70%;
   text-align: left;
+}
+
+.detailsAuditorio {
+  align-items: center;
+  width: 100%;
 }
 
 .details h2 {
@@ -703,5 +713,117 @@
   }
   .boton-flotante img {
     width: 100px;    
+  }
+}
+
+/* ===== Travel Talks / Auditorio: grilla de tarjetas =====
+   Todo va scopeado a #divAuditorio para no afectar el bloque
+   "Seminarios y panel" (#conferencia-paneles), que comparte
+   las clases .session / .time / .details y sigue en formato fila. */
+
+#divAuditorio .auditorio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr; /* misma altura para todas las tarjetas de la grilla */
+  gap: 24px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+#divAuditorio .auditorio-grid .session {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  margin-bottom: 0; /* el gap de la grilla reemplaza al margin */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+#divAuditorio .auditorio-grid .details {
+  width: 100%;
+  align-items: flex-start;
+  text-align: left;
+  margin-right: 0;
+}
+
+#divAuditorio .auditorio-grid .details h2 {
+  color: #0071b9;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 6px;
+}
+
+#divAuditorio .auditorio-grid .details p {
+  color: #6d6d6d;
+  font-size: 13px;
+  line-height: 135%;
+  margin: 0;
+}
+
+#divAuditorio .auditorio-grid .time {
+  width: 100%;
+  margin-top: auto; /* ancla la hora al pie: forma una banda horizontal */
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-top: 16px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#divAuditorio .auditorio-grid .time .hour {
+  color: #0071b9;
+  font-size: 13px;
+  margin: 0;
+  text-align: left !important; /* vence al .text-center del HTML */
+}
+
+/* Responsive: enganchado a los breakpoints ya existentes en home.css */
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  #divAuditorio .auditorio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  #divAuditorio .auditorio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #divAuditorio .auditorio-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ===== Travel Talks: banner superior ===== */
+
+#conferencia-panelesDirectorio .banner-travel-talks {
+  margin-bottom: 40px;
+}
+
+#conferencia-panelesDirectorio .banner-travel-talks img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* La imagen es 1366x360 (3.79:1). En pantallas angostas esa proporcion
+   dejaria una franja de ~100px de alto; se recorta para que la foto
+   siga siendo legible y la ponente quede encuadrada. */
+@media only screen and (max-width: 599px) {
+  #conferencia-panelesDirectorio .banner-travel-talks {
+    margin-bottom: 24px;
+  }
+
+  #conferencia-panelesDirectorio .banner-travel-talks img {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: 58% center;
   }
 }

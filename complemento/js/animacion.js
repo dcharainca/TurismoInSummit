@@ -135,10 +135,8 @@ async function cargarSolucionesTecnologicas() {
 
       if (
         item.RUC == "Coexpositores" ||
-        item.RUC == "TurismoReuniones" ||
-        item.RUC == "20131372001_1" ||
-        item.RUC == "20131372001" ||
-        item.RUC == "20168999926"
+        item.RUC == "Licenciatarios" ||
+        item.RUC == "AsistenteVirtualIA"
       ) {
         const tempDiv = document.createElement("div");
         const tempSpan = document.createElement("span");
@@ -153,21 +151,32 @@ async function cargarSolucionesTecnologicas() {
       return img;
     }
 
+    // Orden alfabetico por nombre comercial en las tres categorias.
+    // Se ignoran tildes y espacios sobrantes al comparar.
+    const porNombre = (a, b) =>
+      (a.NombreComercial || "")
+        .trim()
+        .localeCompare((b.NombreComercial || "").trim(), "es", {
+          sensitivity: "base",
+        });
+
     data
       .filter((item) => item.Categoria === "Soluciones tecnológicas")
+      .sort(porNombre)
       .forEach((item) => {
         contenedorSolTech.appendChild(crearElemento(item));
       });
 
     data
       .filter((item) => item.Categoria === "Certificadoras")
+      .sort(porNombre)
       .forEach((item) => {
         contenedorCertifi.appendChild(crearElemento(item));
       });
 
     data
       .filter((item) => item.Categoria === "Servicios gubernamentales")
-      .sort((a, b) => a.Orden - b.Orden)
+      .sort(porNombre)
       .forEach((item) => {
         contenedorSerGube.appendChild(crearElemento(item));
       });
