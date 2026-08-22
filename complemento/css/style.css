@@ -724,7 +724,10 @@
 #divAuditorio .auditorio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr; /* misma altura para todas las tarjetas de la grilla */
+  /* Filas segun su contenido. Dentro de cada fila las tarjetas se igualan
+     solas (align-items: stretch), asi que las horas siguen alineadas por
+     fila; en movil, con una sola columna, cada tarjeta queda a su medida. */
+  grid-auto-rows: auto;
   gap: 24px;
   margin-top: 30px;
   text-align: left;

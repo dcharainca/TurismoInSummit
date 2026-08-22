@@ -226,8 +226,14 @@ function detalleEmpresa(ruc) {
     empresa.NombreComercial || "";
 
   const paginaWeb = document.querySelector(".aPaginaWeb");
-  paginaWeb.href = empresa.PaginaWeb || "#";
-  paginaWeb.textContent = empresa.PaginaWeb ? "Página web" : "Sin página";
+  const web = (empresa.PaginaWeb || "").trim();
+  // El origen a veces manda la URL sin protocolo ("www.x.com", "x.la").
+  // Sin esquema el navegador la resuelve como ruta relativa al landing,
+  // asi que se antepone https:// cuando falta.
+  const webAbsoluta = web && !/^https?:/i.test(web) ? "https://" + web : web;
+  paginaWeb.href = webAbsoluta || "#";
+  paginaWeb.rel = "noopener noreferrer";
+  paginaWeb.textContent = web ? "Página web" : "Sin página";
 
   if (empresa.Categoria == "Servicios gubernamentales") {
     document.querySelector(".dContacto").style.display = "none";
