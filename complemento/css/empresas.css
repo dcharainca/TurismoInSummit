@@ -89,7 +89,21 @@
 
 
   
-  @media (max-width: 768px) {
+  /* Escalonado de columnas. Antes saltaba de 4 a 1 en 768px, lo que
+     dejaba una fila completa por logo en tablets: mucho vacio. */
+  @media (min-width: 600px) and (max-width: 979px) {
+    .image-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 400px) and (max-width: 599px) {
+    .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 399px) {
     .image-grid {
       grid-template-columns: 1fr;
     }

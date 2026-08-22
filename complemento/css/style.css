@@ -830,3 +830,15 @@
     object-position: 58% center;
   }
 }
+
+/* ===== Travel Talks: ancho en pantallas chicas =====
+   #conferencia-panelesDirectorio esta anidado DENTRO del
+   .wrapper-third-section de #directorio-expositores. En <=480px ese
+   contenedor usa width:80%, asi que el 80% se aplicaba dos veces y el
+   contenido quedaba al ~64% del viewport (y la grilla al 50%).
+   En el resto de breakpoints el ancho es fijo en px y no compuesta. */
+@media only screen and (max-width: 480px) {
+  #conferencia-panelesDirectorio .wrapper-third-section {
+    width: 100%;
+  }
+}
