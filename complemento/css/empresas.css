@@ -89,8 +89,6 @@
 
 
   
-  /* Escalonado de columnas. Antes saltaba de 4 a 1 en 768px, lo que
-     dejaba una fila completa por logo en tablets: mucho vacio. */
   @media (min-width: 600px) and (max-width: 979px) {
     .image-grid {
       grid-template-columns: repeat(3, 1fr);

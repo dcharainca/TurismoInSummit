@@ -151,8 +151,6 @@ async function cargarSolucionesTecnologicas() {
       return img;
     }
 
-    // Orden alfabetico por nombre comercial en las tres categorias.
-    // Se ignoran tildes y espacios sobrantes al comparar.
     const porNombre = (a, b) =>
       (a.NombreComercial || "")
         .trim()
@@ -227,9 +225,6 @@ function detalleEmpresa(ruc) {
 
   const paginaWeb = document.querySelector(".aPaginaWeb");
   const web = (empresa.PaginaWeb || "").trim();
-  // El origen a veces manda la URL sin protocolo ("www.x.com", "x.la").
-  // Sin esquema el navegador la resuelve como ruta relativa al landing,
-  // asi que se antepone https:// cuando falta.
   const webAbsoluta = web && !/^https?:/i.test(web) ? "https://" + web : web;
   paginaWeb.href = webAbsoluta || "#";
   paginaWeb.rel = "noopener noreferrer";
@@ -323,19 +318,43 @@ document.querySelectorAll(".modal-overlay").forEach((overlay) => {
 
 (function () {
   const parallaxSections = document.querySelectorAll(".wrapper-parallax-bg");
+  if (!parallaxSections.length) return;
 
-  function updateParallax() {
-    const scrollY = window.scrollY;
-    parallaxSections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const offsetTop = rect.top + window.scrollY;
-      const speed = 0.4;
-      const yPos = (scrollY - offsetTop) * speed;
-      section.style.backgroundPosition = `center ${yPos}px`;
+  const ANCLA_X = "30%";
+  const VELOCIDAD = 0.4;
+
+  let offsets = [];
+  let pendiente = false;
+
+  function medir() {
+    offsets = Array.prototype.map.call(parallaxSections, function (s) {
+      return s.getBoundingClientRect().top + window.scrollY;
     });
   }
 
-  window.addEventListener("scroll", updateParallax);
-  window.addEventListener("resize", updateParallax);
-  updateParallax();
+  function pintar() {
+    const scrollY = window.scrollY;
+    parallaxSections.forEach(function (section, i) {
+      const yPos = (scrollY - offsets[i]) * VELOCIDAD;
+      section.style.backgroundPosition = ANCLA_X + " " + yPos + "px";
+    });
+    pendiente = false;
+  }
+
+  function alScroll() {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(pintar);
+  }
+
+  function remedir() {
+    medir();
+    alScroll();
+  }
+
+  medir();
+  pintar();
+  window.addEventListener("scroll", alScroll, { passive: true });
+  window.addEventListener("resize", remedir);
+  window.addEventListener("load", remedir);
 })();

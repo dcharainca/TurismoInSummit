@@ -716,17 +716,9 @@
   }
 }
 
-/* ===== Travel Talks / Auditorio: grilla de tarjetas =====
-   Todo va scopeado a #divAuditorio para no afectar el bloque
-   "Seminarios y panel" (#conferencia-paneles), que comparte
-   las clases .session / .time / .details y sigue en formato fila. */
-
 #divAuditorio .auditorio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* Filas segun su contenido. Dentro de cada fila las tarjetas se igualan
-     solas (align-items: stretch), asi que las horas siguen alineadas por
-     fila; en movil, con una sola columna, cada tarjeta queda a su medida. */
   grid-auto-rows: auto;
   gap: 24px;
   margin-top: 30px;
@@ -739,7 +731,7 @@
   align-items: stretch;
   justify-content: flex-start;
   height: 100%;
-  margin-bottom: 0; /* el gap de la grilla reemplaza al margin */
+  margin-bottom: 0;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -768,7 +760,7 @@
 
 #divAuditorio .auditorio-grid .time {
   width: 100%;
-  margin-top: auto; /* ancla la hora al pie: forma una banda horizontal */
+  margin-top: auto;
   margin-right: 0;
   margin-bottom: 0;
   padding-top: 16px;
@@ -780,10 +772,9 @@
   color: #0071b9;
   font-size: 13px;
   margin: 0;
-  text-align: left !important; /* vence al .text-center del HTML */
+  text-align: left !important;
 }
 
-/* Responsive: enganchado a los breakpoints ya existentes en home.css */
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
   #divAuditorio .auditorio-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -803,8 +794,6 @@
   }
 }
 
-/* ===== Travel Talks: banner superior ===== */
-
 #conferencia-panelesDirectorio .banner-travel-talks {
   margin-bottom: 40px;
 }
@@ -816,9 +805,6 @@
   border-radius: 12px;
 }
 
-/* La imagen es 1366x360 (3.79:1). En pantallas angostas esa proporcion
-   dejaria una franja de ~100px de alto; se recorta para que la foto
-   siga siendo legible y la ponente quede encuadrada. */
 @media only screen and (max-width: 599px) {
   #conferencia-panelesDirectorio .banner-travel-talks {
     margin-bottom: 24px;
@@ -831,14 +817,14 @@
   }
 }
 
-/* ===== Travel Talks: ancho en pantallas chicas =====
-   #conferencia-panelesDirectorio esta anidado DENTRO del
-   .wrapper-third-section de #directorio-expositores. En <=480px ese
-   contenedor usa width:80%, asi que el 80% se aplicaba dos veces y el
-   contenido quedaba al ~64% del viewport (y la grilla al 50%).
-   En el resto de breakpoints el ancho es fijo en px y no compuesta. */
 @media only screen and (max-width: 480px) {
   #conferencia-panelesDirectorio .wrapper-third-section {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper-parallax-bg {
+    height: 140%;
   }
 }
