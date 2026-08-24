@@ -6,11 +6,6 @@ var dataJson;
 (function () {
   const carousels = [
     {
-      selector: "#ponentesPanelistas .ponentes-carousel-track",
-      cardSelector: ".ponente-card-wrapper",
-      gap: 15,
-    },
-    {
       selector: "#directorioExpositores .carousel-track",
       cardSelector: ".card-wrapper",
       gap: 20,
@@ -260,13 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(
     "#ponentesPanelistas .ponente-card-wrapper"
   );
-  const track = document.querySelector(
-    "#ponentesPanelistas .ponentes-carousel-track"
-  );
-
   function toggleCard(card) {
-    if (track.classList.contains("dragging")) return;
-
     cards.forEach((c) => {
       if (c !== card) c.classList.remove("show-desc");
     });
@@ -282,7 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     card.addEventListener("touchend", function (e) {
-      if (track.classList.contains("dragging")) return;
       toggleCard(card);
       e.stopPropagation();
     });

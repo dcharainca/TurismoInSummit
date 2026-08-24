@@ -457,37 +457,20 @@
   z-index: 10000;
 }
 
-#ponentesPanelistas .ponentes-carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-/* #ponentesPanelistas .ponentes-carousel-track {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        } */
-#ponentesPanelistas .ponentes-carousel-track {
-  display: flex;
-  transition: transform 0.3s ease;
-  cursor: grab;
-  will-change: transform;
-}
-
-#ponentesPanelistas .ponentes-carousel-track.dragging {
-  transition: none;
-}
-
-#ponentesPanelistas .ponentes-carousel-group {
-  display: flex;
+#ponentesPanelistas .ponentes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  margin: 0 auto;
+  justify-items: stretch;
 }
 
 #ponentesPanelistas .ponente-card-wrapper {
+  width: 100%;
   position: relative;
   overflow: hidden;
-  flex: 0 0 auto;
+  max-width: 312px;
   text-align: center;
+  margin: 0 auto;
 }
 
 #ponentesPanelistas .ponente-nombre {
@@ -495,15 +478,14 @@
   font-size: 16px;
   font-weight: normal;
   text-align: center;
-  min-width: 312px;
   color: #662483;
   font-family: "FC_Regular";
 }
 
 #ponentesPanelistas .ponente-card {
   position: relative;
-  width: 312px;
-  height: 350px;
+  width: 100%;
+  aspect-ratio: 312 / 350;
   background-size: cover !important;
   background-position: center !important;
   border-radius: 8px;
@@ -515,7 +497,6 @@
   bottom: -100%;
   left: 0;
   width: 100%;
-  min-width: 312px;
   margin: 0;
   padding: 10px;
   background: rgba(0, 0, 0, 0.7);
@@ -525,6 +506,8 @@
   opacity: 0;
   transition: bottom 0.7s ease, opacity 0.2s ease;
   box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
 
   font-family: "FC_Light";
   font-weight: normal;
@@ -543,32 +526,16 @@
   opacity: 1;
 }
 
-#ponentesPanelistas .ponentes-carousel-track {
-  cursor: grab;
-  user-select: none;
-}
-
-#ponentesPanelistas .ponentes-carousel-track.dragging .ponente-card-wrapper,
-#ponentesPanelistas .ponentes-carousel-track.dragging .ponente-card,
-#ponentesPanelistas .ponentes-carousel-track.dragging .ponente-descripcion {
-  pointer-events: none;
-}
-
-.ponentes-carousel-track,
 .carousel-track {
   transition: transform 0.3s ease;
   cursor: grab;
   will-change: transform;
 }
 
-.ponentes-carousel-track.dragging,
 .carousel-track.dragging {
   transition: none;
 }
 
-.ponentes-carousel-track.dragging .ponente-card-wrapper,
-.ponentes-carousel-track.dragging .ponente-card,
-.ponentes-carousel-track.dragging .ponente-descripcion,
 .carousel-track.dragging .card-wrapper,
 .carousel-track.dragging .card,
 .carousel-track.dragging .overlay {
@@ -828,3 +795,16 @@
     height: 140%;
   }
 }
+
+
+@media only screen and (min-width: 600px) and (max-width: 1099px) {
+  #ponentesPanelistas .ponentes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #ponentesPanelistas .ponentes-grid {
+    grid-template-columns: 1fr;
+  }
+}
