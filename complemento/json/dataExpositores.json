@@ -38,7 +38,7 @@
       "NombreComercial": "Bookingmotor",
       "Categoria": "Soluciones tecnológicas",
       "PaginaWeb": "https://www.bookingmotor.com/es",
-      "Descripcion": "Bookingmotor by Carrusel es una plataforma de ventas online que conecta más de 120 proveedores vía API. Ofrece hoteles, vuelos, traslados, actividades y seguros, e integra pasarelas de pago, rebooking y soluciones ERP.",
+      "Descripcion": "Bookingmotor es una plataforma de ventas online que conecta más de 120 proveedores vía API. Ofrece hoteles, vuelos, traslados, actividades y seguros, e integra pasarelas de pago, rebooking y soluciones ERP.",
       "Contacto": "Fiorela Rojas Ramírez",
       "Cargo": "Coordinadora de Atención al Cliente",
       "Correo": "fiorela@bookingmotor.com"
@@ -194,7 +194,7 @@
       "PaginaWeb": "www.restaurant.pe",
       "Descripcion": "Restaurant.pe es una plataforma tecnológica que digitaliza y optimiza la gestión de restaurantes, hoteles, cafeterías y negocios turísticos. Integra ventas, reservas, fidelización y analítica a tiempo real para reducir costos operativos.",
       "Contacto": "Alejandro Espinoza Tolentino",
-      "Cargo": "Jefe de ‘Marketing’",
+      "Cargo": "Jefe de Marketing",
       "Correo": "aespinoza@restaurant.pe"
     },
     {
@@ -278,11 +278,20 @@
     {
       "RazonSocial": "PROMPERÚ",
       "RUC": "Coexpositores",
-      "NombreComercial": "MICE + Coexpositores",
+      "NombreComercial": "COEXPOSITORES",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://coexpositores.promperu.gob.pe/",
       "Descripcion": "La plataforma de Coexpositores impulsa la internacionalización de empresas turísticas peruanas al conectarlas con compradores globales mediante eventos que fortalezcan su presencia comercial y competitividad.",
       "Correo": "coexpositores@promperu.gob.pe"
+    },
+    {
+      "RazonSocial": "PROMPERÚ",
+      "RUC": "Coexpositores",
+      "NombreComercial": "TURISMO DE REUNIONES",
+      "Categoria": "Servicios gubernamentales",
+      "PaginaWeb": "https://meetings.peru.travel/",
+      "Descripcion": "Turismo de reuniones tiene la misión de promover el segmento MICE a través de participaciones en ferias especializadas de la industria de reuniones, ruedas y misiones comerciales.",
+      "Correo": "turismodereuniones@promperu.gob.pe"
     },
     {
       "RazonSocial": "",
