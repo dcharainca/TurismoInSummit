@@ -278,7 +278,7 @@
     {
       "RazonSocial": "PROMPERÚ",
       "RUC": "Coexpositores",
-      "NombreComercial": "COEXPOSITORES",
+      "NombreComercial": "Coexpositores",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://coexpositores.promperu.gob.pe/",
       "Descripcion": "La plataforma de Coexpositores impulsa la internacionalización de empresas turísticas peruanas al conectarlas con compradores globales mediante eventos que fortalezcan su presencia comercial y competitividad.",
@@ -286,8 +286,8 @@
     },
     {
       "RazonSocial": "PROMPERÚ",
-      "RUC": "Coexpositores",
-      "NombreComercial": "TURISMO DE REUNIONES",
+      "RUC": "Turismodereuniones",
+      "NombreComercial": "Turismo de reuniones",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://meetings.peru.travel/",
       "Descripcion": "Turismo de reuniones tiene la misión de promover el segmento MICE a través de participaciones en ferias especializadas de la industria de reuniones, ruedas y misiones comerciales.",

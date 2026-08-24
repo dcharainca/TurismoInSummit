@@ -136,7 +136,9 @@ async function cargarSolucionesTecnologicas() {
       if (
         item.RUC == "Coexpositores" ||
         item.RUC == "Licenciatarios" ||
-        item.RUC == "AsistenteVirtualIA"
+        item.RUC == "AsistenteVirtualIA"||
+        item.RUC == "Turismodereuniones"
+
       ) {
         const tempDiv = document.createElement("div");
         const tempSpan = document.createElement("span");
