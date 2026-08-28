@@ -42,18 +42,7 @@
       "Contacto": "Fiorela Rojas Ramírez",
       "Cargo": "Coordinadora de Atención al Cliente",
       "Correo": "fiorela@bookingmotor.com"
-    },
-    {
-      "RazonSocial": "",
-      "RUC": "CleanRoom",
-      "NombreComercial": "Clean Room",
-      "Categoria": "Soluciones tecnológicas",
-      "PaginaWeb": "https://clean-room.app/es",
-      "Descripcion": "Clean Room digitaliza y optimiza el ‘housekeeping’ hotelero: planifica tareas, asigna habitaciones, controla avances, registra evidencias y gestiona insumos en tiempo real para potenciar la productividad.",
-      "Contacto": "Ana Karina Mendoza",
-      "Cargo": "Gerente de Cuentas Clave",
-      "Correo": "anakarina@sys.pe"
-    },
+    },    
     {
       "RazonSocial": "",
       "RUC": "DestinoPlus",
@@ -118,7 +107,18 @@
       "Descripcion": "LABXR PUCP propone asesoría, formación y consultoría para el desarrollo de estrategias que usen realidad extendida (AR, VR, foto y video 360, WebXR), como elemento de innovación y captación de público.",
       "Contacto": "Andrés León Geyer",
       "Cargo": "-",
-      "Correo": "flabxr@pucp.edu.pe"
+      "Correo": "labxr@pucp.edu.pe"
+    },
+    {
+      "RazonSocial": "Niubiz",
+      "RUC": "Niubiz",
+      "NombreComercial": "Niubiz",
+      "Categoria": "Soluciones tecnológicas",
+      "PaginaWeb": "https://www.niubiz.com.pe/",
+      "Descripcion": "Niubiz ofrece soluciones de pago digitales para negocios de distintos sectores, que les permite cobrar de forma eficiente, segura y sin fricciones con tarjetas, billeteras digitales y pagos internacionales.",
+      "Contacto": "Claudia Mori",
+      "Cargo": "Gerente de Marketing",
+      "Correo": "cmori@niubiz.com.pe "
     },
     {
       "RazonSocial": "",
@@ -199,7 +199,7 @@
     },
     {
       "RazonSocial": "Cluster Internet SAC",
-      "RUC": 20600944291,
+      "RUC": "Shopify x Cluster",
       "NombreComercial": "Shopify x Cluster",
       "Categoria": "Soluciones tecnológicas",
       "PaginaWeb": "https://cluster.global",
@@ -236,7 +236,7 @@
       "NombreComercial": "Asistente Virtual con IA",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://www.peru.travel/",
-      "Descripcion": "El Asistente Virtual de Viajes con Inteligencia Artificial, integrado en Peru.Travel, ofrece experiencias de planificación personalizadas y multilingües a los viajeros de acuerdo con sus intereses, perfil y tiempo disponible.",
+      "Descripcion": "El Asistente Virtual de Viajes con IA de Perú.Travel ofrece a potenciales viajeros una experiencia de planificación personalizada y multilingüe, adaptada a sus intereses y perfil. Sus interacciones generan datos y analítica que apoyan las acciones de ‘marketing’.",
       "Correo": "asistente.ia@promperu.gob.pe"
     },
     {
@@ -263,15 +263,15 @@
       "NombreComercial": "CANATUR",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://canaturperu.org/views/public/",
-      "Descripcion": "CANATUR representa y articula al sector privado del turismo para promover la competitividad del Perú como destino. Sus iniciativas impulsan el crecimiento económico, la defensa gremial y la consolidación del turismo interno y receptivo.",
-      "Correo": ""
+      "Descripcion": "CANATUR ejecuta el proyecto “Turismo Circular Perú”, mecanismo que busca la transición del sector turístico hacia un modelo de desarrollo más circular y bajo en carbono, mediante la gobernanza y la articulación estratégica de actores clave del sector.",
+      "Correo": "turismo.circular@canaturperu.org"
     },
     {
       "RazonSocial": "",
       "RUC": "Cenfotur",
       "NombreComercial": "CENFOTUR",
       "Categoria": "Servicios gubernamentales",
-      "PaginaWeb": "http://cenfotur.gob.pe",
+      "PaginaWeb": "https://www.gob.pe/cenfotur",
       "Descripcion": "CENFOTUR forma talento especializado en turismo a través de carreras, cursos y capacitación empresarial. Sus programas fortalecen la competitividad del sector mediante educación de calidad, innovación y actualización profesional.",
       "Correo": "lchuecas@cenfotur.edu.pe"
     },
@@ -298,7 +298,7 @@
       "RUC": "Produce",
       "NombreComercial": "PRODUCE",
       "Categoria": "Servicios gubernamentales",
-      "PaginaWeb": "https://www.gob.pe/produce",
+      "PaginaWeb": "https://meetings.peru.travel/es",
       "Descripcion": "La Red de Centros MYPE Digital de PRODUCE impulsa la transformación de las pequeñas empresas mediante orientación, capacitaciones y asistencia técnica.",
       "Correo": "cbelaunde@produce.gob.pe"
     },
@@ -405,11 +405,11 @@
       "RUC": "SistemaB",
       "NombreComercial": "Sistema B",
       "Categoria": "Certificadoras",
-      "PaginaWeb": "www.fab.pe",
+      "PaginaWeb": "http://www.sistemab.org",
       "Descripcion": "Sistema B certifica empresas turísticas con altos estándares sociales y ambientales. Esta acreditación valida el impacto positivo, atrae a viajeros conscientes y conecta con una red global de negocios con propósito.",
-      "Contacto": "Delia Barriga",
-      "Cargo": "Directora ejecutiva",
-      "Correo": "delia@fablablima.org"
+      "Contacto": "Nicole Poma Barriga",
+      "Cargo": "Analista de Desarrollo de Negocio",
+      "Correo": "nicole.poma@sisteamb.org"
     },
     {
       "RazonSocial": "Km Cero S.C.R.L",
