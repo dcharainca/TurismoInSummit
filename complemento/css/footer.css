@@ -588,3 +588,58 @@
         width: 1150px;
     }
 }
+.wrapper-footer-right ul li.li-correo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.wrapper-footer-right ul li.li-correo a {
+    flex: 0 0 auto;
+}
+
+.btn-copiar-correo {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #0079c1;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-copiar-correo:hover {
+    background: #0091e6;
+}
+
+.btn-copiar-correo:active {
+    transform: scale(0.94);
+}
+
+.btn-copiar-correo:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.btn-copiar-correo.copiado {
+    background: #77b822;
+}
+
+.aviso-copiado {
+    font-family: 'FC_Light';
+    font-size: 12px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.aviso-copiado.visible {
+    opacity: 1;
+}

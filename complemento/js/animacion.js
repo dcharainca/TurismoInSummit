@@ -243,6 +243,17 @@ function detalleEmpresa(ruc) {
   correoEl.onclick = empresa.Correo
     ? () => (window.location.href = `mailto:${empresa.Correo}`)
     : null;
+
+  const btnCopiarPopup = document.querySelector(".btn-copiar-popup");
+  if (btnCopiarPopup) {
+    const avisoPopup = btnCopiarPopup.parentElement.querySelector(".aviso-copiado");
+    if (avisoPopup) { avisoPopup.textContent = ""; avisoPopup.classList.remove("visible"); }
+    btnCopiarPopup.classList.remove("copiado");
+    const ico = btnCopiarPopup.querySelector("i");
+    if (ico) ico.className = "fa fa-files-o";
+    btnCopiarPopup.setAttribute("data-correo", empresa.Correo || "");
+    btnCopiarPopup.style.display = empresa.Correo ? "" : "none";
+  }
   document.querySelector(".aDescripcion").textContent =
     empresa.Descripcion || "";
 
