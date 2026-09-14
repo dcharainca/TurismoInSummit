@@ -46,12 +46,12 @@
     {
       "RazonSocial": "",
       "RUC": "DestinoPlus",
-      "NombreComercial": "DESTINO PLUS (Súbito)",
+      "NombreComercial": "Súbito Red - DestinoPlus",
       "Categoria": "Soluciones tecnológicas",
-      "PaginaWeb": "http://destinoplus.com/",
-      "Descripcion": "Destino Plus es un sistema operativo turístico con IA que convierte datos en itinerarios dinámicos. Potencia la infraestructura del destino e impulsa la economía local dirigiendo el gasto hacia el comercio cercano.",
-      "Contacto": "Mariella Sperduti",
-      "Cargo": "Coordinadora de proyectos",
+      "PaginaWeb": "http://subitored.es",
+      "Descripcion": "Súbito Red — DestinoPlus es la plataforma que acompaña al visitante dentro del destino y mueve el gasto hacia el comercio de cercanía.",
+      "Contacto": "José Garín",
+      "Cargo": "Director de Súbito Red",
       "Correo": "proyectos@subitored.es"
     },
     {
@@ -75,6 +75,17 @@
       "Contacto": "Yonathan De Paz",
       "Cargo": "‘Country manager’ Perú FNSrooms",
       "Correo": "ydepaz@fnsrooms.com"
+    },
+    {
+      "RazonSocial": "Clean Room",
+      "RUC": "CleanRoom",
+      "NombreComercial": "Clean Room",
+      "Categoria": "Soluciones tecnológicas",
+      "PaginaWeb": "https://clean-room.app/es",
+      "Descripcion": "Clean Room digitaliza y optimiza el ‘housekeeping’ hotelero: planifica tareas, asigna habitaciones, controla avances, registra evidencias y gestiona insumos en tiempo real para potenciar la productividad.",
+      "Contacto": "Ana Karina Mendoza",
+      "Cargo": "Gerente de Cuentas Clave",
+      "Correo": "anakarina@sys.pe"
     },
     {
       "RazonSocial": "Internova Multimedia SAC",
@@ -252,8 +263,17 @@
       "NombreComercial": "CANATUR",
       "Categoria": "Servicios gubernamentales",
       "PaginaWeb": "https://canaturperu.org/views/public/",
+      "Descripcion": "CANATUR representa y articula al sector privado del turismo para promover la competitividad del Perú como destino. Sus iniciativas impulsan el crecimiento económico, la defensa gremial y la consolidación del turismo interno y receptivo.",
+      "Correo": ""
+    },
+    {
+      "RazonSocial": "Turismo Circular",
+      "RUC": "TurismoCircular",
+      "NombreComercial": "Turismo Circular",
+      "Categoria": "Servicios gubernamentales",
+      "PaginaWeb": "https://turismocircularperu.pe/",
       "Descripcion": "CANATUR ejecuta el proyecto “Turismo Circular Perú”, mecanismo que busca la transición del sector turístico hacia un modelo de desarrollo más circular y bajo en carbono, mediante la gobernanza y la articulación estratégica de actores clave del sector.",
-      "Correo": "turismo.circular@canaturperu.org"
+      "Correo": "turismo.circular@canaturperu.org "
     },
     {
       "RazonSocial": "",
